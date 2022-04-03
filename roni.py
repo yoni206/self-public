@@ -46,8 +46,6 @@ for (i,j) in V:
           print("(", i, ", ", j, ") -- (", ii, ", ", jj, ")")
       
 # fix start and end nodes
-# start node: (3, 2) 
-# end node: (7,0)
 start = (3,3)
 end = (0,0)
 
