@@ -19,7 +19,7 @@ from pysmt.typing import REAL
 # except for the top and bottom rows and left and right columns
 
 # fix grid size
-n = 4
+n = 3
 
 # fix max visits per node
 max_visits_per_node = 1
@@ -40,14 +40,20 @@ for i in range(0, n):
       E.add(((i,j), (i, j-1)))
 
 # print graph
+print("graph:")
 for (i,j) in V:
     for (ii,jj) in V:
         if ((i,j), (ii, jj)) in E:
           print("(", i, ", ", j, ") -- (", ii, ", ", jj, ")")
       
 # fix start and end nodes
-start = (3,3)
+start = (2,2)
 end = (0,0)
+
+# print start and end
+print()
+print("start:", start)
+print("end:", end)
 
 # dis-allowed visits:
 # blocks[(x,y)] = (a,b) means that you cannot be at (x,y) 
@@ -56,6 +62,12 @@ end = (0,0)
 blocks = {}
 for i in range(0, n):
   blocks[(1,i)] = (0,5.5)
+
+# print blocks
+print()
+print("blocks:")
+for block in blocks:
+  print(block, ":", blocks[block])
 
 # Define the variables.
 # "x-(i,j)-k" is the time-stamp in which the agent was at point (i,j) for the kth time
@@ -176,6 +188,8 @@ r = solver.is_sat(constraint)
 m = solver.get_model()
 
 # print the path nicely
+print()
+print("path (time: node)")
 reverse_m = {solver.get_py_value(v):k for (k,v) in m}
 times = [k for k in reverse_m]
 times.sort()
