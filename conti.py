@@ -7,8 +7,9 @@ from pysmt.shortcuts import Real, TRUE
 steps = 5
 
 # blocks are circles and are defined using their center and radius, and the time in which they are blocked
-blocks = {((1, 1), 1): (0, 3),
-          ((3, 3), 0.5): (1, 4)
+blocks = {((0, 0), 1): (1, 2),
+          ((1, 1), 1): (0, 3),
+          ((3, 3), 0.5): (0, 4)
           }
 
 x_start = 0
@@ -29,7 +30,7 @@ for i in range(0, steps):
   y_vars += [Symbol("y_" + str(i), REAL)]
   t_vars += [Symbol("t_" + str(i), REAL)]
 
-
+# TODO need to make the lines not to cross
 # don't cross blocks
 for block in blocks:
     point = block[0]
