@@ -8,7 +8,7 @@ from pysmt.shortcuts import Real
 from pysmt.shortcuts import Symbol
 
 # import operators from pysmt
-from pysmt.shortcuts import And, Or, Implies, LT, GT, GE, Equals, Not
+from pysmt.shortcuts import And, Or, Implies, LT, GT, GE, LE, Equals, Not
 
 # import the type "REAL" from pysmt of real numbers
 from pysmt.typing import REAL
@@ -19,7 +19,7 @@ from pysmt.typing import REAL
 # except for the top and bottom rows and left and right columns
 
 # fix grid size
-n = 3
+n = 5
 
 # fix max visits per node
 max_visits_per_node = 1
@@ -113,9 +113,10 @@ for (i,j) in V:
                   clause += [between]
             # the above needs to hold only when we actually visited (i,j) and (ii,jj),
             # that is, if their time stamps are non-negative.
-            occurred1 = GE(variables[(i,j)][k], Real(0))
+            occurred1 = GE(variables[(i,j)][k], variables[start][0])
             occurred2 = GT(variables[(ii,jj)][kk], variables[(i,j)][k])
-            occurred = And(occurred1, occurred2)
+            occurred3 = LE(variables[(ii,jj)][kk], variables[end][0])
+            occurred = And(occurred1, occurred2, occurred3)
             # separated means that one of the other points is between them
             separated = Or(clause)
             graph_constraint = Implies(occurred, separated)
@@ -133,6 +134,7 @@ for node  in blocks:
     outside1 = LT(variables[node][k], Real(low))
     outside2 = GT(variables[node][k], Real(high))
     outside = Or(outside1, outside2)
+    relevant = And(LE(variables[node][k], variables[end][0]), LE(variables[start][0], variables[node][k]))
     block_constraints += [outside]
 
 # source and target constraints
@@ -168,6 +170,8 @@ for (i,j) in V:
     second_visit_constraint = Implies(GE(variables[(i,j)][k+1], Real(0)), And(LT(variables[(i,j)][k], variables[(i,j)][k+1]), GE(variables[(i,j)][k], Real(0))))
     second_visit_constraints += [second_visit_constraint]
 
+start_constraint = GE(variables[start][0], Real(0))
+
 # collect all the constraints
 constraint = And(
        graph_constraints + 
@@ -175,17 +179,28 @@ constraint = And(
        second_visit_constraints +
         [ source_constraint, 
             target_constraint, 
-            distinct_constraint
+            distinct_constraint,
+            start_constraint
         ])
 
 # create a solver
 solver = Solver(name="z3")
 
 # check satisfaibility
-r = solver.is_sat(constraint)
-
-# get a model (will fail if unsat)
+solver.add_assertion(constraint)
+r = solver.check_sat()
 m = solver.get_model()
+oldval = 0
+while r:
+  val = solver.get_value(variables[end][0])
+  if abs(eval(str(oldval)) - eval(str(val))) < 0.001: break
+  print("val:", float(eval(str(val))))
+  solver.add_assertion(LT(variables[end][0], val))
+  r = solver.check_sat()
+  if r:
+    m = solver.get_model()
+    oldval = val
+
 
 # print the path nicely
 print()
@@ -195,4 +210,4 @@ times = [k for k in reverse_m]
 times.sort()
 for time in times:
   if time >= 0:
-    print(str(time) + ": ", reverse_m[time])
+    print(str(eval(str(time))) + ": ", reverse_m[time])
