@@ -1,4 +1,4 @@
-from pysmt.shortcuts import Solver
+from pysmt.shortcuts import Solver, UnsatCoreSolver
 from pysmt.shortcuts import Symbol, And, Equals, Implies
 from pysmt.shortcuts import Plus, Minus, Times, GE, LE, GT, LT
 from pysmt.shortcuts import REAL
@@ -6,11 +6,10 @@ from pysmt.shortcuts import Real, TRUE
 
 steps = 5
 
-# blocks are circles and are defined using their center and radius, and the time in which they are blocked
-blocks = {((0, 0), 1): (1, 2),
-          ((1, 1), 1): (0, 3),
-          ((3, 3), 0.5): (0, 4)
-          }
+# blocks are circles and are defined using their center and radius
+blocks = [
+          ((1, 1), 1),
+          ((3, 3), 0.5)]
 
 x_start = 0
 y_start = 0
@@ -19,7 +18,8 @@ t_start = 0
 x_end = 10
 y_end = 10
 
-solver = Solver("z3")
+solver = UnsatCoreSolver("z3")
+solver.set_option("produce-unsat-cores", "true")
 
 x_vars = []
 y_vars = []
@@ -35,20 +35,15 @@ for i in range(0, steps):
 for block in blocks:
     point = block[0]
     radius = block[1]
-    time_range = blocks[block]
     x = point[0]
     y = point[1]
-    start_time = time_range[0]
-    end_time = time_range[1]
 
     for i in range(0, steps):
       xi = x_vars[i]
       yi = y_vars[i]
-      ti = t_vars[i]
-      cond = And(LE(Real(start_time), ti), LE(ti, Real(end_time)))
       distance_from_point_sq = Plus(Times(Minus(xi, Real(x)), Minus(xi, Real(x))), Times(Minus(yi, Real(y)), Minus(yi, Real(y))))
       distant = GT(distance_from_point_sq, Times(Real(radius), Real(radius)))
-      solver.add_assertion(Implies(cond, distant))
+      solver.add_assertion(distant)
 
 
 # Don't continue after you are there
@@ -94,10 +89,13 @@ for i in range(0, steps):
 #check sat
 sat = solver.check_sat()
 if sat:
+  print("there is a solution")
   model = solver.get_model()
   for i in range(0, steps):
     print(model[t_vars[i]], ": (", model[x_vars[i]], ", ", model[y_vars[i]], ")")
-
+else:
+  print("no solution")
+  print(solver.get_unsat_core())
 
 
 
