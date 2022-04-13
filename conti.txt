@@ -1,0 +1,6 @@
+start: (0,0, 0)
+end: (2, 2, ?)
+speed constarint: if p1 is (x1, y1, t1) and p2 is (x2, y2, t2) then
+t2-t1 >= distance between the points.
+
+after that: permanent obstacles with a circle shape.
