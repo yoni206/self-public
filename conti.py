@@ -1,10 +1,22 @@
 from pysmt.shortcuts import Solver
 from pysmt.shortcuts import Symbol, And, Equals, Implies
-from pysmt.shortcuts import Plus, Minus, Times, GE
+from pysmt.shortcuts import Plus, Minus, Times, GE, LE, GT, LT
 from pysmt.shortcuts import REAL
 from pysmt.shortcuts import Real, TRUE
 
 steps = 5
+
+# blocks are circles and are defined using their center and radius, and the time in which they are blocked
+blocks = {((1, 1), 1): (0, 3),
+          ((3, 3), 0.5): (1, 4)
+          }
+
+x_start = 0
+y_start = 0
+t_start = 0
+
+x_end = 10
+y_end = 10
 
 solver = Solver("z3")
 
@@ -17,12 +29,26 @@ for i in range(0, steps):
   y_vars += [Symbol("y_" + str(i), REAL)]
   t_vars += [Symbol("t_" + str(i), REAL)]
 
-x_start = 0
-y_start = 0
-t_start = 0
 
-x_end = 2
-y_end = 2
+# don't cross blocks
+for block in blocks:
+    point = block[0]
+    radius = block[1]
+    time_range = blocks[block]
+    x = point[0]
+    y = point[1]
+    start_time = time_range[0]
+    end_time = time_range[1]
+
+    for i in range(0, steps):
+      xi = x_vars[i]
+      yi = y_vars[i]
+      ti = t_vars[i]
+      cond = And(LE(Real(start_time), ti), LE(ti, Real(end_time)))
+      distance_from_point_sq = Plus(Times(Minus(xi, Real(x)), Minus(xi, Real(x))), Times(Minus(yi, Real(y)), Minus(yi, Real(y))))
+      distant = GT(distance_from_point_sq, Times(Real(radius), Real(radius)))
+      solver.add_assertion(Implies(cond, distant))
+
 
 # Don't continue after you are there
 for i in range(0, steps):
