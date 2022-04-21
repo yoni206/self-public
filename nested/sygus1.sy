@@ -1,0 +1,12 @@
+(set-logic ALL)
+(declare-datatypes ((NestedDT 0)) (((empty) (insert ( index Int ) (fields (Seq NestedDT) ) ))))
+
+(synth-fun f ((ndt NestedDT) (i Int) ) Bool
+((Start Bool) (StartInt Int) (StartNestedDT NestedDT) (StartSeq (Seq NestedDT)))
+((Start Bool ((= StartNestedDT StartNestedDT) (not Start)))
+(StartInt Int (0 1 i (+ StartInt StartInt)))
+(StartNestedDT NestedDT (ndt empty (insert StartInt StartSeq) (seq.nth StartSeq StartInt)))
+(StartSeq (Seq NestedDT) ( (as seq.empty (Seq NestedDT)) (seq.unit StartNestedDT) ))))
+
+(constraint true)
+(check-synth)
