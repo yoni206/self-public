@@ -4,6 +4,11 @@ from pysmt.shortcuts import Plus, Minus, Times, GE, LE, GT, LT, Div
 from pysmt.shortcuts import REAL
 from pysmt.shortcuts import Real, TRUE
 
+
+import matplotlib.pyplot as plt
+plt.style.use('seaborn-whitegrid')
+import numpy as np
+
 steps = 3
 
 # blocks are circles and are defined using their center and radius
@@ -114,10 +119,24 @@ if sat:
   model = solver.get_model()
   for i in range(0, steps):
     print(model[t_vars[i]], ": (", model[x_vars[i]], ", ", model[y_vars[i]], ")")
-  print("distances_sq:")
-  for distant in distances_sq:
-    print(solver.get_value(distant))
   
+  x = [float(str(model[xx])) for xx in x_vars]
+  y = [float(str(model[yy])) for yy in y_vars]
+  labels = [str(model[tt]) for tt in t_vars]
+  fig, ax = plt.subplots()
+  ax.scatter(x,y)
+
+  ax.plot(x,y,color='black')
+
+  for i, txt in enumerate(labels):
+    ax.annotate(txt, (x[i], y[i]))
+
+  for block in blocks:
+    point = block[0]
+    radius = block[1]
+    circle = plt.Circle(point, radius)
+    ax.add_patch(circle)
+  fig.savefig('plotcircles.png')
 else:
   print("no solution")
   unsat_core = solver.get_unsat_core()
