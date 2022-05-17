@@ -3,9 +3,11 @@ from pysmt.shortcuts import Symbol, And, Equals, Implies, Not
 from pysmt.shortcuts import Plus, Minus, Times, GE, LE, GT, LT, Div
 from pysmt.shortcuts import REAL
 from pysmt.shortcuts import Real, TRUE
-import matplotlib.pyplot as plt
-import numpy as np
-plt.style.use('seaborn-whitegrid')
+
+# nice drawings don't work on my new machine :(
+# import matplotlib.pyplot as plt
+# import numpy as np
+# plt.style.use('seaborn-whitegrid')
 
 # number of steps in the plan
 steps = 3
@@ -39,8 +41,7 @@ for i in range(0, steps):
   y_vars += [Symbol("y_" + str(i), REAL)]
   t_vars += [Symbol("t_" + str(i), REAL)]
 
-# TODO need to make the lines not to cross
-# don't cross blocks
+# constraints for not crossing blocks
 distances_sq = []
 for block in blocks:
     point = block[0]
@@ -61,7 +62,6 @@ for block in blocks:
       x2 = xxii
       y2 = yyii
 
-
       numerator = Minus(Times(Minus(x2, x1), Minus(y1, y0)), Times(Minus(x1, x0), Minus(y2, y1)))
       numerator_sq = Times(numerator, numerator)
       tmp1 = Minus(x2, x1)
@@ -73,7 +73,7 @@ for block in blocks:
       solver.add_assertion(condition)
       distances_sq += [distance_sq]
 
-# Don't continue after you are there
+# Don't continue after you are there -- temporarilly removed
 # for i in range(0, steps):
 #   got_there1 = Equals(x_vars[i], Real(x_end))
 #   got_there2 = Equals(y_vars[i], Real(y_end))
@@ -124,24 +124,25 @@ if sat:
   model = solver.get_model()
   for i in range(0, steps):
     print(model[t_vars[i]], ": (", model[x_vars[i]], ", ", model[y_vars[i]], ")")
-  
-  x = [float(str(model[xx])) for xx in x_vars]
-  y = [float(str(model[yy])) for yy in y_vars]
-  labels = [str(model[tt]) for tt in t_vars]
-  fig, ax = plt.subplots()
-  ax.scatter(x,y)
-
-  ax.plot(x,y,color='black')
-
-  for i, txt in enumerate(labels):
-    ax.annotate(txt, (x[i], y[i]))
-
-  for block in blocks:
-    point = block[0]
-    radius = block[1]
-    circle = plt.Circle(point, radius)
-    ax.add_patch(circle)
-  fig.savefig('plotcircles.png')
+ 
+# can't do nice graphs on new machine 
+#   x = [float(str(model[xx])) for xx in x_vars]
+#   y = [float(str(model[yy])) for yy in y_vars]
+#   labels = [str(model[tt]) for tt in t_vars]
+#   fig, ax = plt.subplots()
+#   ax.scatter(x,y)
+# 
+#   ax.plot(x,y,color='black')
+# 
+#   for i, txt in enumerate(labels):
+#     ax.annotate(txt, (x[i], y[i]))
+# 
+#   for block in blocks:
+#     point = block[0]
+#     radius = block[1]
+#     circle = plt.Circle(point, radius)
+#     ax.add_patch(circle)
+#   fig.savefig('plotcircles.png')
 else:
   print("no solution")
   unsat_core = solver.get_unsat_core()
