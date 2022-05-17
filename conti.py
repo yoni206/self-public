@@ -4,26 +4,33 @@ from pysmt.shortcuts import Plus, Minus, Times, GE, LE, GT, LT, Div
 from pysmt.shortcuts import REAL
 from pysmt.shortcuts import Real, TRUE
 
+# number of steps in the plan
 steps = 3
 
 # blocks are circles and are defined using their center and radius
 blocks = [
           ((3, 3), 1)]
 
+# start location and time
 x_start = 0
 y_start = 0
 t_start = 0
 
+# end location (goal)
 x_end = 10
 y_end = 10
 
+#create a solver
 solver = UnsatCoreSolver("z3")
 solver.set_option("produce-unsat-cores", "true")
 
+# for each step we have x,y,t variables.
+# There are stored in lists for x_vars, y_vars and t_vars
 x_vars = []
 y_vars = []
 t_vars = []
 
+# creating the variables
 for i in range(0, steps):
   x_vars += [Symbol("x_" + str(i), REAL)]
   y_vars += [Symbol("y_" + str(i), REAL)]
