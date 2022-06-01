@@ -10,7 +10,7 @@ from pysmt.shortcuts import Real, TRUE
 # plt.style.use('seaborn-whitegrid')
 
 # number of steps in the plan
-steps = 3
+steps = 5
 
 # blocks are circles and are defined using their center and radius
 blocks = [
