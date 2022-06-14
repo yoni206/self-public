@@ -1,4 +1,4 @@
-# Are there non-empty strings x,y,z such that x.y.z == abc.z is in the regular language
+# Are there non-empty strings x,y,z such that x.y.z is in the regular language
 # defined by (ab[c-e]*f)|g|h
 
 import cvc5
