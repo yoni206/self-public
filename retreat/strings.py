@@ -1,4 +1,4 @@
-# Are there strings x,y,z such that x.ab.y == abc.z ?
+# Are there non-empty strings x,y,z such that x.ab.y == abc.z ?
 
 import cvc5
 from cvc5 import Kind
