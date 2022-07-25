@@ -16,7 +16,7 @@ python3 cover-bool.py <path to donors csv> <path to recipients csv> <path to edg
 
 # Examples
 We consider the following input:
-![alt text](ex1.jpeg)
+![alt text](ex1.jpeg | width=50)
 Nodes on the left are donors, nodes on the right are recipient profiles.
 The number next to the recipient profile node is the number of recipients with that profile.
 The number on an edge is a score for the match between the donor and the recipient.
