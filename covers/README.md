@@ -17,7 +17,7 @@ python3 cover-bool.py <path to donors csv> <path to recipients csv> <path to edg
 # Examples
 We consider the following input:
 
-<img src="ex1.jpeg" width="200">
+<img src="ex1.jpeg" width="300">
 
 Nodes on the left are donors, nodes on the right are recipient profiles.
 The number next to the recipient profile node is the number of recipients with that profile.
