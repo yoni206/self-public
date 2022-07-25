@@ -23,9 +23,9 @@ leny = slv.mkTerm(Kind.STRING_LENGTH, y)
 lenz = slv.mkTerm(Kind.STRING_LENGTH, z)
 
 # |x|,|y|,|z| >= 1
-formula1 = slv.mkTerm(Kind.GEQ, lenx, slv.mkInteger(1))
-formula2 = slv.mkTerm(Kind.GEQ, leny, slv.mkInteger(1))
-formula3 = slv.mkTerm(Kind.GEQ, lenz, slv.mkInteger(1))
+formula1 = slv.mkTerm(Kind.GEQ, lenx, slv.mkInteger(2))
+formula2 = slv.mkTerm(Kind.GEQ, leny, slv.mkInteger(2))
+formula3 = slv.mkTerm(Kind.GEQ, lenz, slv.mkInteger(2))
 
 # Regular expression: (ab[c-e]*f)|g|h
 r = slv.mkTerm(Kind.REGEXP_UNION,
