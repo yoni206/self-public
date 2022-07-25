@@ -14,7 +14,7 @@ python3 cover-bool.py <path to donors csv> <path to recipients csv> <path to edg
 ```
 
 
-# Examples
+# Example
 We consider the following input:
 
 <img src="ex1.jpeg" width="300">
@@ -30,6 +30,8 @@ graph_nodes_recipients.csv
 graph_edges.csv
 ```
 
+
+## Usage Examples
 - maximum 4 donors:
 ```
 $ python3 cover-bool.py graph_nodes_donors.csv graph_nodes_recipients.csv graph_edges.csv 4
