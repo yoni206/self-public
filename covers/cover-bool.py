@@ -19,24 +19,36 @@ def validate(donors, recipients, edges):
         assert(node2 in recipients)
 
 def gen_at_most_one(vars, solver):
+    conjuncts = []
     result = solver.mkTrue()
     for v in vars:
         for u in vars:
             if v != u:
                 both = solver.mkTerm(Kind.AND, v, u)
                 not_both = solver.mkTerm(Kind.NOT, both)
-                result = solver.mkTerm(Kind.AND, result, not_both)
-    return result
+                conjuncts += [not_both]
+    if len(conjuncts) != 0:
+        result = solver.mkTerm(Kind.AND, *conjuncts)
+        return result
+    else:
+        return solver.mkTrue()
 
 def gen_at_most_k(vars, solver, k):
-    result = solver.mkTrue()
+    conjuncts = []
     for I in itertools.combinations(vars, k+1):
-        disj = solver.mkFalse()
+        disjuncts = []
         for x in I:
             neg_x = solver.mkTerm(Kind.NOT, x)
-            disj = solver.mkTerm(Kind.OR, disj, neg_x)
-        result = solver.mkTerm(Kind.AND, result, disj)
-    return result
+            disjuncts += [neg_x]
+        disjunction = solver.mkTerm(Kind.OR, *disjuncts)
+    conjuncts += [disjunction]
+    if len(conjuncts) == 0:
+        return solver.mkTrue()
+    elif len(conjuncts) == 1:
+        return conjuncts[0]
+    else:
+        result = solver.mkTerm(Kind.AND, *conjuncts)
+        return result
 
 def mk_nry_term(kind, terms):
     assert kind in [Kind.OR, Kind.AND]
@@ -50,6 +62,7 @@ def mk_nry_term(kind, terms):
     
 solver = cvc5.Solver()
 solver.setOption("produce-models", "true")
+solver.setOption("early-ite-removal", "true")
 
 donors_csv = sys.argv[1]
 recipients_csv = sys.argv[2]
@@ -115,6 +128,7 @@ for e in edges:
 
 # bool sort
 bool_sort = solver.getBooleanSort()
+int_sort = solver.getIntegerSort()
 
 # create variables for edges
 variables = {}
@@ -124,12 +138,16 @@ for d in donors:
     assert d not in variables
     variables[d] = solver.mkConst(bool_sort, str(d))
 
+print("debug: number of variables: ", len(variables))
+
 # Every recipient node appears at most once
 for recipient in recipients_to_edges:
     edges_to_recipient = recipients_to_edges[recipient]
     edges_vars = [variables[e] for e in edges_to_recipient]
     at_most_one = gen_at_most_one(edges_vars, solver)
     solver.assertFormula(at_most_one)
+
+print("debug: computed and asserted at most one constraint for recipients")
 
 # if donor is on edge that was selected, the donor is selected
 for donor in donors_to_edges:
@@ -138,12 +156,15 @@ for donor in donors_to_edges:
     some_edge_selected = mk_nry_term(Kind.OR, variables_for_edges)
     equivalence = solver.mkTerm(Kind.EQUAL, variables[donor], some_edge_selected)
     solver.assertFormula(equivalence)
-    
+
+print("debug: computed and asserted edge to donor constraints")
+
 
 # Number of donors is bounded by k
 at_most_k = gen_at_most_k([variables[d] for d in donors], solver, donor_bound)
+print("debug: computed at most k constraints")
 solver.assertFormula(at_most_k)
-
+print("debug: asserted at most k constraints")
 
 # construct goal node
 zero = solver.mkInteger(0)
@@ -155,7 +176,12 @@ for e in edges:
     ite = solver.mkTerm(Kind.ITE, variable, mult, zero)
     goal = solver.mkTerm(Kind.ADD, goal, ite)
 
+goal_var = solver.mkConst(int_sort, "goal_var")
+eq_goal_var = solver.mkTerm(Kind.EQUAL, goal_var, goal)
+solver.assertFormula(eq_goal_var)
+
 # check sat
+print("debug: about to call check-sat for the first time")
 sat = solver.checkSat()
 
 if not sat.isSat():
@@ -164,16 +190,23 @@ if not sat.isSat():
 
 # optimize
 goal_val = -1
+iteration = 1
 while sat.isSat():
-    goal_val = solver.getValue(goal)
+    print("debug: iteration:", iteration)
+    iteration += 1
+    print("debug: asking for the current value of the goal")
+    goal_val = solver.getValue(goal_var)
+    print("debug: got the current value of the goal")
     selected_edges = [e for e in edges if solver.getValue(variables[e]).getBooleanValue()]    
     
     # print("candidate edges: ", selected_edges)
     # print("candidate goal: ", goal_val)
 
-
+    print("debug: creating the new bound")
     bound = solver.mkTerm(Kind.GT, goal, goal_val)
+    print("debug: about to assert the bound to the solver")
     solver.assertFormula(bound)
+    print("debug: about to call check-sat")
     sat = solver.checkSat()
 
 
