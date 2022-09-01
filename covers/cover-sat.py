@@ -2,6 +2,7 @@ import pysat
 from pysat.solvers import Glucose3
 from pysat.formula import CNF, CNFPlus
 from pysat.card import CardEnc
+from pysat.pb import *
 import itertools
 import sys
 
@@ -69,7 +70,7 @@ with open(edges_csv, 'r') as f:
         weight = weight.strip()
         label[edge] = int(weight)
     validate(donors, recipients, edges)
-
+print("debug: number of edges: ", len(edges))
 
 # map recipients to edges
 recipients_to_edges = {}
@@ -87,9 +88,14 @@ for e in edges:
 # create variables for edges and donors
 counter = 1
 variables = {}
+variables_to_edges = {}
 for e in edges:
     variables[e] = counter
+    variables_to_edges[counter] = e
     counter += 1
+largest_index_for_edges = counter - 1
+assert(counter - 1 == len(variables))
+
 for d in donors:
     assert d not in variables
     variables[d] = counter 
@@ -133,46 +139,57 @@ print("debug: computed at most k constraints")
 cnfp.extend(at_most_k_cnfp)
 print("debug: added at most k constraints")
 
+lits_to_weights = {variables[e]:label[e]*label[e[1]] for e in edges}
 
-lits = [variables[e] for e in edges]
-weights = [label[e]*label[e[1]] for e in edges]
+lits = []
+weights = []
+for k in lits_to_weights.keys():
+    v = lits_to_weights[k]
+    lits += [k]
+    weights += [v]
 
 # check sat
 print("debug: about to call check-sat for the first time")
+solver.append_formula(cnfp)
 sat = solver.solve()
 
 if not sat:
     print("unsat")
     exit()
 
+print("debug: largest index for edges: ", largest_index_for_edges)
 # optimize
 goal_val = -1
 iteration = 1
 while sat:
+    print("debug: *****************************")
     print("debug: iteration:", iteration)
     iteration += 1
     print("debug: asking for the current value of the goal")
     model = solver.get_model()
     goal_val = 0
+    selected_edges = []
     for lit in model:
-        if lit > 0:
-            weight = weights[lit]
+        if lit > 0 and lit <= largest_index_for_edges:
+            print("debug: lit: ", lit)
+            weight = lits_to_weights[lit]
             goal_val += weight
+            selected_edges += [variables_to_edges[lit]]
     print("debug: got the current value of the goal")
-    selected_edges = [e for e in edges if variables[e] in model]
     
     # print("candidate edges: ", selected_edges)
     # print("candidate goal: ", goal_val)
 
-    print("debug: creating the new bound")
-    bound_cnf = pysat.pb.PBEnc.atleast(lits=lits, weights=weights, bound=goal_val)
+    print("debug: creating the new bound: ", goal_val)
+    bound_cnf = pysat.pb.PBEnc.atleast(lits=lits, weights=weights, bound=goal_val+1)
     print("debug: about to assert the bound to the solver")
     solver.append_formula(bound_cnf)
     print("debug: about to call check-sat")
-    sat = solver.check()
+    sat = solver.solve()
 
 
 print("chosen edges: ", selected_edges)
+print("chosen donors: ", set([d for (d,r) in selected_edges]))
 print("maximal score: ", goal_val)
 
 
