@@ -1,16 +1,11 @@
-from pysmt.shortcuts import Solver, UnsatCoreSolver
-from pysmt.shortcuts import Symbol, And, Equals, Implies, Not
-from pysmt.shortcuts import Plus, Minus, Times, GE, LE, GT, LT, Div
-from pysmt.shortcuts import REAL
-from pysmt.shortcuts import Real, TRUE
-
+from cvc5.pythonic import *
 # nice drawings don't work on my new machine :(
 # import matplotlib.pyplot as plt
 # import numpy as np
 # plt.style.use('seaborn-whitegrid')
 
 # number of steps in the plan
-steps = 5
+steps = 3
 
 # blocks are circles and are defined using their center and radius
 blocks = [
@@ -26,8 +21,8 @@ x_end = 10
 y_end = 10
 
 #create a solver
-solver = UnsatCoreSolver("z3")
-solver.set_option("produce-unsat-cores", "true")
+solver = Solver()
+solver.setOption("produce-unsat-cores", "true")
 
 # for each step we have x,y,t variables.
 # There are stored in lists for x_vars, y_vars and t_vars
@@ -37,9 +32,9 @@ t_vars = []
 
 # creating the variables
 for i in range(0, steps):
-  x_vars += [Symbol("x_" + str(i), REAL)]
-  y_vars += [Symbol("y_" + str(i), REAL)]
-  t_vars += [Symbol("t_" + str(i), REAL)]
+  x_vars += Reals("x_" + str(i))
+  y_vars += Reals("y_" + str(i))
+  t_vars += Reals("t_" + str(i))
 
 # constraints for not crossing blocks
 distances_sq = []
@@ -55,33 +50,34 @@ for block in blocks:
       xxii = x_vars[i-1]
       yyii = y_vars[i-1]
 
-      x0 = Real(x)
-      y0 = Real(y)
+      x0 = x
+      y0 = y
       x1 = xi
       y1 = yi
       x2 = xxii
       y2 = yyii
-
-      numerator = Minus(Times(Minus(x2, x1), Minus(y1, y0)), Times(Minus(x1, x0), Minus(y2, y1)))
-      numerator_sq = Times(numerator, numerator)
-      tmp1 = Minus(x2, x1)
-      tmp2 = Minus(y2, y1)
-      denominator_sq = Plus(Times(tmp1, tmp1), Times(tmp2, tmp2)) 
-      distance_sq = Div(numerator_sq, denominator_sq)
-      distant = GT(distance_sq, Times(Real(radius), Real(radius)))
-      condition = Implies(And(Not(Equals(x1, x2)), Not(Equals(y1, y2))), distant)
-      solver.add_assertion(condition)
+      
+      numerator = ((x2 - x1) * (y1 - y0)) - ((x1 - x0) * (y2 - y1)) 
+      numerator_sq = numerator * numerator
+      tmp1 = x2 - x1
+      tmp2 = y2 - y1
+      denominator_sq = (tmp1 * tmp1) + tmp2 * tmp2
+      distance_sq = numerator_sq / denominator_sq
+      distant = distance_sq > radius * radius
+      condition = Implies(And(Not(x1 == x2), Not(y1 == y2)), distant)
+      condition = Implies(And(Not(x1 == x2), Not(y1 == y2)), distant)
+      solver.add(condition)
       distances_sq += [distance_sq]
 
 # Don't continue after you are there -- temporarilly removed
 # for i in range(0, steps):
-#   got_there1 = Equals(x_vars[i], Real(x_end))
-#   got_there2 = Equals(y_vars[i], Real(y_end))
+#   got_there1 = x_vars[i] == Real(x_end)
+#   got_there2 = y_vars[i] == Real(y_end)
 #   got_there = And([got_there1, got_there2])
 #   stay_there_constraints = []
 #   for j in range(i+1, steps):
-#     stay_there_constraint_x = Equals(x_vars[j], Real(x_end))
-#     stay_there_constraint_y = Equals(y_vars[j], Real(y_end))
+#     stay_there_constraint_x = x_vars[j] == Real(x_end)
+#     stay_there_constraint_y = y_vars[j] == Real(y_end)
 #     stay_there_constraint = And(stay_there_constraint_x, stay_there_constraint_y)
 #     stay_there_constraints += [stay_there_constraint]
 #   if len(stay_there_constraints) > 0:
@@ -91,17 +87,17 @@ for block in blocks:
 #   solver.add_assertion(Implies(got_there, stay_there))
 
 # start at start
-solver.add_assertion(Equals(x_vars[0], Real(x_start)))
-solver.add_assertion(Equals(y_vars[0], Real(y_start)))
+solver.add(x_vars[0] == x_start)
+solver.add(y_vars[0] == y_start)
 
 #end at end
-solver.add_assertion(Equals(x_vars[steps - 1], Real(x_end)))
-solver.add_assertion(Equals(y_vars[steps - 1], Real(y_end)))
+solver.add(x_vars[steps - 1] == x_end)
+solver.add(y_vars[steps - 1] == y_end)
 
 # times are non-decreasing and non-negative
-solver.add_assertion(GE(t_vars[0], Real(0)))
+solver.add((t_vars[0] >= 0))
 for i in range(0, steps - 1):
-  solver.add_assertion(GE(t_vars[i+1], t_vars[i]))
+  solver.add((t_vars[i+1] >= t_vars[i]))
 
 # don't go too fast
 for i in range(0, steps):
@@ -112,13 +108,15 @@ for i in range(0, steps):
     xj = x_vars[j]
     yj = y_vars[j]
     tj = t_vars[j]
-    delta = Minus(ti, tj)
-    delta_sq = Times(delta, delta)
-    distance_sq = Plus(Times(Minus(xi, xj), Minus(xi, xj)), Times(Minus(yi, yj), Minus(yi, yj)))
-    solver.add_assertion(GE(delta_sq, distance_sq))
+    delta = (ti - tj)
+    delta_sq = (delta * delta)
+    distance_sq = Plus(((xi - xj) * (xi - xj)), ((yi - yj) * (yi - yj)))
+    solver.add((delta_sq >= distance_sq))
 
 #check sat
-sat = solver.check_sat()
+print("about to check sat")
+print("assertions:", solver.assertions())
+sat = solver.check()
 if sat:
   print("there is a solution")
   model = solver.get_model()
