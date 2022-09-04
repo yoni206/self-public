@@ -27,6 +27,9 @@ real_sort = solver.getRealSort()
 # a relatively recent option which is good
 solver.setOption("nl-cov-force", "true")
 
+# produce models for sat formulas
+solver.setOption("produce-models", "true")
+
 # for each step we have x,y,t variables.
 # There are stored in lists for x_vars, y_vars and t_vars
 x_vars = []
@@ -35,9 +38,9 @@ t_vars = []
 
 # creating the variables
 for i in range(0, steps):
-  x_vars += solver.mkConst(real_sort, "x_" + str(i))
-  y_vars += solver.mkConst(real_sort, "y_" + str(i))
-  t_vars += solver.mkConst(real_sort, "t_" + str(i))
+  x_vars += [solver.mkConst(real_sort, "x_" + str(i))]
+  y_vars += [solver.mkConst(real_sort, "y_" + str(i))]
+  t_vars += [solver.mkConst(real_sort, "t_" + str(i))]
 
 # points are not in blocks
 for block in blocks:
@@ -67,10 +70,18 @@ for block in blocks:
         ok = solver.mkTerm(Kind.OR, *[left_ok, right_ok, top_ok, bottom_ok])
         solver.assertFormula(ok)
 
+# start at start, end at end
+solver.assertFormula(solver.mkTerm(Kind.EQUAL, x_vars[0], solver.mkReal(x_start)))
+solver.assertFormula(solver.mkTerm(Kind.EQUAL, y_vars[0],  solver.mkReal(y_start)))
+solver.assertFormula(solver.mkTerm(Kind.EQUAL, x_vars[steps - 1],  solver.mkReal(x_end)))
+solver.assertFormula(solver.mkTerm(Kind.EQUAL, y_vars[steps - 1],  solver.mkReal(y_end)))
+
 # times are non-decreasing and non-negative
-solver.assertFormula(solver.mkTerm(Kind.GEQ, t_vars[0], zero))
+print("panda t_vars", t_vars)
+solver.assertFormula(solver.mkTerm(Kind.EQUAL, t_vars[0], zero))
 for i in range(0, steps - 1):
-  solver.add(solver.mkTerm(Kind.GEQ, t_vars[i+1], t_vars[i]))
+  noneg = solver.mkTerm(Kind.GEQ, t_vars[i+1], t_vars[i])
+  solver.assertFormula(noneg)
 
 # don't go too fast
 for i in range(0, steps):
@@ -81,22 +92,21 @@ for i in range(0, steps):
     xj = x_vars[j]
     yj = y_vars[j]
     tj = t_vars[j]
-    delta = solver.mkTerm(MINUS, ti, tj)
-    delta_sq = solver.mkTerm(MULT, delta, delta)
-    xij = solver.mkTerm(xi, xj)
-    yij = solver.mkTerm(yi, yj)
-    xijxij = solver.mkTerm(MULT, xij, xij)
-    yijyij = solver.mkTerm(MULT, yij, yij)
-    distance_sq = solver.mkTerm(PLUS, xijxij, yijyij)
-    solver.add((delta_sq >= distance_sq))
+    delta = solver.mkTerm(Kind.SUB, ti, tj)
+    delta_sq = solver.mkTerm(Kind.MULT, delta, delta)
+    xij = solver.mkTerm(Kind.SUB, xi, xj)
+    yij = solver.mkTerm(Kind.SUB, yi, yj)
+    xijxij = solver.mkTerm(Kind.MULT, xij, xij)
+    yijyij = solver.mkTerm(Kind.MULT, yij, yij)
+    distance_sq = solver.mkTerm(Kind.ADD, xijxij, yijyij)
+    not_too_fast = solver.mkTerm(Kind.GEQ, delta_sq, distance_sq)
+    solver.assertFormula(not_too_fast)
 
 #check sat
 print("about to check sat")
-print("assertions:", solver.assertions())
-if sat == solver.check():
+# print("assertions:", solver.getAssertions())
+if solver.checkSat():
   print("there is a solution")
-  model = solver.model()
-  model = solver.model()
   for i in range(0, steps):
-    model[t_vars[i]]
-    print(model[t_vars[i]], ": (", model[x_vars[i]], ", ", model[y_vars[i]], ")")
+    print(solver.getValue(t_vars[i]), ": (", solver.getValue(x_vars[i]), ", ", solver.getValue(y_vars[i]), ")")
+    
