@@ -9,7 +9,8 @@ steps = 3
 
 # blocks are circles and are defined using their center and radius
 blocks = [
-          ((3, 3), 1)]
+          ((3, 3), 1)
+          ]
 
 # start location and time
 x_start = 0
@@ -22,7 +23,7 @@ y_end = 10
 
 #create a solver
 solver = Solver()
-solver.setOption("produce-unsat-cores", "true")
+solver.setOption("nl-cov-force", "true")
 
 # for each step we have x,y,t variables.
 # There are stored in lists for x_vars, y_vars and t_vars
@@ -116,11 +117,12 @@ for i in range(0, steps):
 #check sat
 print("about to check sat")
 print("assertions:", solver.assertions())
-sat = solver.check()
-if sat:
+if sat == solver.check():
   print("there is a solution")
-  model = solver.get_model()
+  model = solver.model()
+  model = solver.model()
   for i in range(0, steps):
+    model[t_vars[i]]
     print(model[t_vars[i]], ": (", model[x_vars[i]], ", ", model[y_vars[i]], ")")
  
 # can't do nice graphs on new machine 
@@ -143,11 +145,11 @@ if sat:
 #   fig.savefig('plotcircles.png')
 else:
   print("no solution")
-  unsat_core = solver.get_unsat_core()
-  print("size of unsat core: ", len(unsat_core))
-  print("unsat core:")
-  for formula in unsat_core:
-    print(formula)
+#   unsat_core = solver.get_unsat_core()
+#   print("size of unsat core: ", len(unsat_core))
+#   print("unsat core:")
+#   for formula in unsat_core:
+#     print(formula)
 
 
 
