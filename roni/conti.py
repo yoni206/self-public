@@ -7,7 +7,7 @@ from cvc5.pythonic import *
 # number of steps in the plan
 steps = 3
 
-# blocks are circles and are defined using their center and radius
+# blocks are squares and are defined using their center and size of side
 blocks = [
           ((3, 3), 1)
           ]
@@ -23,6 +23,8 @@ y_end = 10
 
 #create a solver
 solver = Solver()
+
+# a relatively recent option which is good
 solver.setOption("nl-cov-force", "true")
 
 # for each step we have x,y,t variables.
@@ -41,34 +43,30 @@ for i in range(0, steps):
 distances_sq = []
 for block in blocks:
     point = block[0]
-    radius = block[1]
+    sidze = block[1]
     x = point[0]
     y = point[1]
+    
+    # x axis value of left side
+    left = x - (0.5 * sidze)
+    
+    # x axis value of right side
+    right = x + (0.5 * sidze)
+    
+    # y axis value of top side
+    top = y + (0.5 * sidze)
+
+    # y axis value of bottom side
+    bottom = y - (0.5 * sidze)
 
     for i in range(1, steps):
-      xi = x_vars[i]
-      yi = y_vars[i]
-      xxii = x_vars[i-1]
-      yyii = y_vars[i-1]
-
-      x0 = x
-      y0 = y
-      x1 = xi
-      y1 = yi
-      x2 = xxii
-      y2 = yyii
-      
-      numerator = ((x2 - x1) * (y1 - y0)) - ((x1 - x0) * (y2 - y1)) 
-      numerator_sq = numerator * numerator
-      tmp1 = x2 - x1
-      tmp2 = y2 - y1
-      denominator_sq = (tmp1 * tmp1) + tmp2 * tmp2
-      distance_sq = numerator_sq / denominator_sq
-      distant = distance_sq > radius * radius
-      condition = Implies(And(Not(x1 == x2), Not(y1 == y2)), distant)
-      condition = Implies(And(Not(x1 == x2), Not(y1 == y2)), distant)
-      solver.add(condition)
-      distances_sq += [distance_sq]
+        # from previous step to this step -- line equation mx+n
+        xi = x_vars[i]
+        xii = x_vars[i-1]
+        yi = y_vars[i]
+        yii = y_vars[i-1]
+        mi = (yi - yii) / (xi - xii) 
+        ni = (mi * xi) - yi
 
 # Don't continue after you are there -- temporarilly removed
 # for i in range(0, steps):
