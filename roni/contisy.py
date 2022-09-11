@@ -1,5 +1,8 @@
 from cvc5 import *
 
+def synth_curve(start, end, blocks):
+
+
 # def gen_dist_sqrd(point1, point2):
 #     p1x = point1[0]
 #     p1y = point1[1]
@@ -179,6 +182,7 @@ for i in range(0, steps):
      # distance_sq = solver.mkTerm(Kind.ADD, xijxij, yijyij)
      distance = solver.mkTerm(Kind.ADD, xij, yij)
      # not_too_fast = solver.mkTerm(Kind.GEQ, delta_sq, distance_sq)
+     # TODO this is bulshit, not even abs
      not_too_fast = solver.mkTerm(Kind.GEQ, delta, distance)
      solver.assertFormula(not_too_fast)
 
