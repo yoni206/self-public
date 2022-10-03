@@ -1,10 +1,11 @@
 import pysat
 from pysat.solvers import Glucose3
-from pysat.formula import CNF, CNFPlus
+from pysat.formula import CNF
 from pysat.card import CardEnc
 from pysat.pb import *
 import itertools
 import sys
+
 
 def validate(donors, recipients, edges):
     # no duplicates is a given since we are using sets
@@ -21,6 +22,32 @@ def validate(donors, recipients, edges):
         node2 = e[1]
         assert(node1 in donors)
         assert(node2 in recipients)
+
+def str_clause(c, variables):
+    variables_to_nodes_and_edges = {}
+    for x in variables:
+        variables_to_nodes_and_edges[variables[x]] = x
+    literals = []
+    for ell in c:
+        if abs(ell) <= largest_index:
+            if ell < 0:
+                v = -ell
+                s = "-" + str(variables_to_nodes_and_edges[v])
+            else:
+                v = ell
+                s = str(variables_to_nodes_and_edges[v])
+        else:
+            s = str(ell)
+        literals += [s]
+    return str(literals)
+
+def str_cnf(f, variables):
+    result = "#########################\n"
+    for c in f.clauses:
+        result += str(str_clause(c, variables)) + "\n"
+    return result
+
+
 
 solver = Glucose3()
 
@@ -106,14 +133,14 @@ print("debug: number of variables: ", len(variables))
 largest_index = counter - 1
 
 # create a formula (cnf + carindality constraints)
-cnfp = CNFPlus()
+cnf = CNF()
 
 # Every recipient node appears at most once
 for recipient in recipients_to_edges:
     edges_to_recipient = recipients_to_edges[recipient]
     edges_vars = [variables[e] for e in edges_to_recipient]
-    at_most_one_cnfp = CardEnc.atmost(lits=edges_vars, bound=1, top_id=largest_index)
-    cnfp.extend(at_most_one_cnfp)
+    at_most_one_cnf = pysat.pb.PBEnc.atmost(lits=edges_vars, weights=[1]*len(edges_vars), bound=1, top_id=largest_index)
+    cnf.extend(at_most_one_cnf)
 
 print("debug: computed and asserted at most one constraint for recipients")
 
@@ -121,22 +148,21 @@ print("debug: computed and asserted at most one constraint for recipients")
 for donor in donors_to_edges:
     edges_from_donor = donors_to_edges[donor]
     variables_for_edges = [variables[e] for e in edges_from_donor]
-    some_edge_selected = variables_for_edges
-    if_direction_cnf = [variables_for_edges] + [[-variables[donor]]]
+    if_direction_cnf = variables_for_edges + [-variables[donor]]
+    if_direction_cnf = [if_direction_cnf]
     only_if_direction_cnf = [[-v, variables[donor]] for v in variables_for_edges]
     iff_cnf = if_direction_cnf + only_if_direction_cnf
-    print("panda", iff_cnf)
-    iff_cnfp = CNF(from_clauses=iff_cnf)
-    cnfp.extend(iff_cnfp)
+    iff_cnf = CNF(from_clauses=iff_cnf)
+    cnf.extend(iff_cnf)
 
 
 print("debug: computed and asserted edge to donor constraints")
 
 
 # Number of donors is bounded by k
-at_most_k_cnfp = CardEnc.atmost(lits=[variables[d] for d in donors], bound=donor_bound, top_id=cnfp.nv)
+at_most_k_cnf = CardEnc.atmost(lits=[variables[d] for d in donors], bound=donor_bound, top_id=cnf.nv)
 print("debug: computed at most k constraints")
-cnfp.extend(at_most_k_cnfp)
+cnf.extend(at_most_k_cnf)
 print("debug: added at most k constraints")
 
 lits_to_weights = {variables[e]:label[e]*label[e[1]] for e in edges}
@@ -150,7 +176,7 @@ for k in lits_to_weights.keys():
 
 # check sat
 print("debug: about to call check-sat for the first time")
-solver.append_formula(cnfp)
+solver.append_formula(cnf)
 sat = solver.solve()
 
 if not sat:
@@ -175,7 +201,8 @@ while sat:
             weight = lits_to_weights[lit]
             goal_val += weight
             selected_edges += [variables_to_edges[lit]]
-    print("debug: got the current value of the goal")
+    print("debug: got the current value of the goal:", goal_val)
+    print("debug: got the current selected edges:", selected_edges)
     
     # print("candidate edges: ", selected_edges)
     # print("candidate goal: ", goal_val)
@@ -186,6 +213,7 @@ while sat:
     solver.append_formula(bound_cnf)
     print("debug: about to call check-sat")
     sat = solver.solve()
+    print("debug: sat" if sat else "debug: unsat")
 
 
 print("chosen edges: ", selected_edges)
