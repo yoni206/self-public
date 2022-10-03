@@ -36,12 +36,13 @@ def gen_at_most_one(vars, solver):
 def gen_at_most_k(vars, solver, k):
     conjuncts = []
     for I in itertools.combinations(vars, k+1):
+        print("panda I", I)
         disjuncts = []
         for x in I:
             neg_x = solver.mkTerm(Kind.NOT, x)
             disjuncts += [neg_x]
         disjunction = solver.mkTerm(Kind.OR, *disjuncts)
-    conjuncts += [disjunction]
+        conjuncts += [disjunction]
     if len(conjuncts) == 0:
         return solver.mkTrue()
     elif len(conjuncts) == 1:
@@ -162,6 +163,7 @@ print("debug: computed and asserted edge to donor constraints")
 
 # Number of donors is bounded by k
 at_most_k = gen_at_most_k([variables[d] for d in donors], solver, donor_bound)
+print("panda, at_most_k: ", at_most_k)
 print("debug: computed at most k constraints")
 solver.assertFormula(at_most_k)
 print("debug: asserted at most k constraints")
