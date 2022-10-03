@@ -23,9 +23,14 @@ y_end = 10
 
 #create a solver
 solver = Solver()
+base = main_ctx().solver
+f = solver.add(x_end == y_end)
+base.addSygusConstraint(f)
+
 
 # a relatively recent option which is good
 solver.setOption("nl-cov-force", "true")
+solver.setOption("sygus", "true")
 
 # for each step we have x,y,t variables.
 # There are stored in lists for x_vars, y_vars and t_vars
@@ -91,7 +96,10 @@ solver.add(y_vars[0] == y_start)
 
 #end at end
 solver.add(x_vars[steps - 1] == x_end)
-solver.add(y_vars[steps - 1] == y_end)
+f = solver.add(y_vars[steps - 1] == y_end)
+realSort = base.getRealSort()
+base.declareSygusVar("a", realSort)
+base.addSygusConstraint(f)
 
 # times are non-decreasing and non-negative
 solver.add((t_vars[0] >= 0))
