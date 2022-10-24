@@ -33,10 +33,10 @@ print(precon_to_states)
 # But here we do a list of trajectories becausei lists are not hashable.
 trajectories = [
 # first trajectory
-[And(f[0], f[1]), 0, And(f[0], Not(f[1])), 0, And(f[0], Not(f[1]))],
+[[f[0], f[1]], 0, [f[0], Not(f[1])], 0, [f[0], Not(f[1])]],
 # ...
 # last trajectory
-[f[1], 0, And(f[0], Not(f[1])), 0, And(f[0], Not(f[1]))]
+[[f[1]], 0, [f[0], Not(f[1])], 0, [f[0], Not(f[1])]]
 ]
 
 
@@ -52,9 +52,9 @@ def consistent(preconditions, trajectory):
       # axiom 1:
       assert(i > 0)
       pre_state = trajectory[i-1]
-      precondition = And(preconditions[elem])
-      axiom1 = Implies(pre_state, precondition)
-      axiom1_instances += [axiom1]
+      for lit in preconditions[elem]:
+         axiom1 = Implies(lit, precon_to_states[lit])
+         axiom1_instances += [axiom1]
       
       # # axiom 2:
       # assert(i < len(trajectory) - 1)
