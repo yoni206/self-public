@@ -2,17 +2,15 @@ from cvc5.pythonic import *
 
 num_of_state_variables = 2
 
-# state variables
-f = {}
-for i in range(num_of_state_variables):
-  f[i] = Bool("f" + str(i))
+
+
 
 # effects
 effects = {}
 effects[0] = {}
-effects[0][f[1]] = False
+effects[0][1] = False
 effects[1] = {}
-effects[1][f[1]] = False
+effects[1][1] = False
 
 
 # mapping from preconditions to state variables
@@ -25,7 +23,8 @@ for i in range(len(effects)):
   for j in range(num_of_state_variables):
     new_precon_var = Bool("f" + str(j) + "_in_precon_of_action_" + str(i))
     preconditions[i] += [new_precon_var]
-    precon_to_states[new_precon_var] = f[j]
+    precon_to_states[new_precon_var] = j
+
 
 print(precon_to_states)
 
@@ -33,17 +32,24 @@ print(precon_to_states)
 # But here we do a list of trajectories becausei lists are not hashable.
 trajectories = [
 # first trajectory
-[[f[0], f[1]], 0, [f[0], Not(f[1])], 0, [f[0], Not(f[1])]],
+[[True, True], 0, [True, False], 0, [True, False]],
 # ...
 # last trajectory
-[[f[1]], 0, [f[0], Not(f[1])], 0, [f[0], Not(f[1])]]
+[False, True], 0, [False, False], 0, [False, False]
 ]
 
 
 solver = Solver()
 
 
-def consistent(preconditions, trajectory):
+def consistent(preconditions, trajectories):
+  state_variable_in_trajectory_step = {}
+  for i in range(num_of_state_variables):
+    for j, trajectory in enumerate(trajectories):
+      for k in range(int((len(trajectory) - 1) / 2)):
+        state_variable_in_trajectory_step[(i,j,k)] = Bool("state_var_" + str(i) + "_in_traj_" + str(j) + "_on_step_" + str(k))
+  print(state_variable_in_trajectory_step)
+
   is_state = True
   axiom1_instances = []
   for i, elem in enumerate(trajectory):
@@ -76,9 +82,8 @@ def consistent(preconditions, trajectory):
 
 solver = Solver()
 cons = []
-for trajectory in trajectories:
-  result = consistent(preconditions, trajectory)
-  cons += [result]
+result = consistent(preconditions, trajectories)
+cons += [result]
 cons = And(cons)
 solver.add(cons)
 print("constraints:", cons)
