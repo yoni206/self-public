@@ -11,13 +11,23 @@ for i in range(num_of_state_variables):
 effects = {}
 effects[0] = {}
 effects[0][f[1]] = False
+effects[1] = {}
+effects[1][f[1]] = False
+
+
+# mapping from preconditions to state variables
+precon_to_states = {}
 
 # preconditions
 preconditions = {}
 for i in range(len(effects)):
   preconditions[i] = []
   for j in range(num_of_state_variables):
-    preconditions[i] += [Bool("f" + str(j) + "_in_precon_of_action_" + str(i))]
+    new_precon_var = Bool("f" + str(j) + "_in_precon_of_action_" + str(i))
+    preconditions[i] += [new_precon_var]
+    precon_to_states[new_precon_var] = f[j]
+
+print(precon_to_states)
 
 # A set of trajectories. Each trajectory is a list. 
 # But here we do a list of trajectories becausei lists are not hashable.
@@ -71,13 +81,15 @@ for trajectory in trajectories:
   cons += [result]
 cons = And(cons)
 solver.add(cons)
+print("constraints:", cons)
 result = solver.check()
 while result == sat:
   print(result)
   model = solver.model()
-  print("action model:", model)
-  print("trajectories:", trajectories)
-  print("effects:", effects)
+#   print("**********************\n", model)
+#   print("action model:", model)
+#   print("trajectories:", trajectories)
+#   print("effects:", effects)
   model_values = []
   for i in range(0, len(preconditions)):
     for j in range(0, len(preconditions[i])):
@@ -88,4 +100,5 @@ while result == sat:
         model_values += [Not(preconditions[i][j])]
   block_model = Not(And(model_values))
   solver.add(block_model)
+  result = solver.check()
 
