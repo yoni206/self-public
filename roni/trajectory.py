@@ -7,14 +7,14 @@ num_of_actions = 2
 # effects
 # effects[i][j]
 # the effect of action i on state var j
-effects = {}
-effects[0] = {}
-effects[0][1] = False
-effects[1] = {}
-effects[1][1] = False
-
-
-# mapping from preconditions to state variables
+add_effects = {}
+del_effects = {}
+for i in range(num_of_actions):
+  for s in range(num_of_state_variables):
+    new_add_eff_var = Bool("f" + str(s) + "_in_add_eff_of_action_" + str(i))
+    new_del_eff_var = Bool("f" + str(s) + "_in_del_eff_of_action_" + str(i))
+    add_effects[(i,s)] = new_add_eff_var
+    del_effects[(i,s)] = new_del_eff_var
 
 # preconditions
 preconditions = {}
@@ -35,28 +35,30 @@ trajectories = [
 [[False, True], 0, [False, False], 0, [False, False]]
 ]
 
-def consistent(preconditions, trajectories):
+def consistent(preconditions, add_effects, del_effects, trajectories):
   axiom1_instances = []
-  state_variable_in_trajectory_step = {}
+  axiom2_instances = []
   for i in range(num_of_state_variables):
     # j is index, trajectory is trajectory
     for j, trajectory in enumerate(trajectories):
       for k in range(int((len(trajectory) - 1) / 2)):
-        state_variable_in_trajectory_step[(i,j,k)] = Bool("state_var_" + str(i) + "_in_traj_" + str(j) + "_on_step_" + str(k))
         action = trajectory[2*k+1]
         precondition_var = preconditions[(action, i)]
         axiom1 = Implies(precondition_var, trajectory[2*k][i])
         axiom1_instances += [axiom1]
       
-      # # axiom 2:
-      # assert(i < len(trajectory) - 1)
-      # post_state = trajectory[i+1]
-      # eff = e[elem]
-      # axiom2 = Implies(post_state, eff)
-
-      # # axiom 3:
-      # # TODO
-  return And(axiom1_instances)
+      # axiom 2:
+      # if fi is false in the next state then fi is not in add effect of action
+      # if fi is true in the next state then fi is not in del effect of action
+        add_effect_var = add_effects[(action, i)]
+        del_effect_var = del_effects[(action, i)]
+        post_value = trajectory[2*k+2][i]
+        axiom2_part1 = Implies(add_effect_var, post_value)
+        axiom2_part2 = Implies(del_effect_var, not(post_value))
+        axiom2 = And(axiom2_part1, axiom2_part2)
+      # axiom 3:
+      # TODO
+  return And(axiom1_instances + axiom2_instances)
 
 # the action model given by the preconditions is safe for plans that have n steps
 # def safe(n, preconditions, trajectories):
@@ -74,11 +76,14 @@ def count_trues(action_model):
 
 solver = Solver()
 cons = []
-result = consistent(preconditions, trajectories)
+result = consistent(preconditions, add_effects, del_effects, trajectories)
 solver.add(result)
 result = solver.check()
 action_models_and_num_of_trues = []
+num_of_models = 0
 while result == sat:
+  num_of_models += 1
+  print("panda", num_of_models)
   model = solver.model()
   dict_model = {decl:model[decl] for decl in model}
   action_models_and_num_of_trues += [(dict_model, count_trues(model))]
@@ -86,12 +91,19 @@ while result == sat:
   print("action model:")
   print("\n".join(str(model).split(",")))
   model_values = []
+  variables = []
   for p in preconditions.values():
-      model_val = model[p]
-      if model_val == True:
-        model_values += [p]
-      else:
-        model_values += [Not(p)]
+    variables += [p]
+  for p in add_effects.values():
+    variables += [p]
+  for p in del_effects.values():
+    variables += [p]
+  for p in variables:
+        model_val = model[p]
+        if model_val == True:
+          model_values += [p]
+        else:
+          model_values += [Not(p)]
   block_model = Not(And(model_values))
   solver.add(block_model)
   result = solver.check()
