@@ -3,13 +3,6 @@ import pprint
 
 num_of_state_variables = 2
 num_of_actions = 2
-UNKNOWN="unknown"
-
-# unknowns
-# unknowns[i][j][k]
-# the value of the state variable k in the jth step of trajectory i
-unknowns = {}
-
 
 # effects
 # effects[i][j]
@@ -35,15 +28,12 @@ for i in range(num_of_actions):
 # But here we do a list of trajectories becausei lists are not hashable.
 trajectories = [
 # first trajectory
-[[True, True], 0, [True, UNKNOWN], 0, [True, False]],
+[[True, True], 0, [True, False], 0, [True, False]],
 [[True, True], 1, [True, False], 1, [True, False]],
 # ...
 # last trajectory
 [[False, True], 0, [False, False], 0, [False, False]]
 ]
-
-def key_to_str(key):
-  return str(key[0]) + "_" + str(key[1]) + "_" + str(key[2])
 
 def consistent(preconditions, add_effects, del_effects, trajectories):
   axiom1_instances = []
@@ -53,28 +43,8 @@ def consistent(preconditions, add_effects, del_effects, trajectories):
     for j, trajectory in enumerate(trajectories):
       for k in range(int((len(trajectory) - 1) / 2)):
         action = trajectory[2*k+1]
-        post_value = trajectory[2*k+2][i]
-        pre_value = trajectory[2*k][i]
         precondition_var = preconditions[(action, i)]
-        pre_value_term = None
-        post_value_term = None
-        if pre_value == UNKNOWN:
-          key = (j,k,i)
-          if key not in unknowns:
-            unknowns[key] = Bool("unknown_var_of_traj_step_var" + key_to_str(key))
-          pre_value_term = unknowns[key]
-        else:
-          pre_value_term = pre_value
-
-        if post_value == UNKNOWN:
-          key = (j,k+1,i)
-          if key not in unknowns:
-            unknowns[key] = Bool("unknown_var_of_traj_step_var" + key_to_str(key))
-          post_value_term = unknowns[key]
-        else:
-          post_value_term = post_value
-
-        axiom1 = Implies(precondition_var, pre_value_term)
+        axiom1 = Implies(precondition_var, trajectory[2*k][i])
         axiom1_instances += [axiom1]
       
       # axiom 2:
@@ -83,9 +53,11 @@ def consistent(preconditions, add_effects, del_effects, trajectories):
       # if fi is neither in add nor del effect of action, then fi stays the same as in the previous state (closed world)
         add_effect_var = add_effects[(action, i)]
         del_effect_var = del_effects[(action, i)]
-        axiom2_part1 = Implies(add_effect_var, post_value_term)
-        axiom2_part2 = Implies(del_effect_var, Not(post_value_term))
-        axiom2_part3 = Implies(Not(Or(add_effect_var, del_effect_var)), pre_value_term==post_value)
+        post_value = trajectory[2*k+2][i]
+        pre_value = trajectory[2*k][i]
+        axiom2_part1 = Implies(add_effect_var, post_value)
+        axiom2_part2 = Implies(del_effect_var, not(post_value))
+        axiom2_part3 = Implies(Not(Or(add_effect_var, del_effect_var)), pre_value==post_value)
         axiom2 = And(axiom2_part1, axiom2_part2, axiom2_part3)
         axiom2_instances += [axiom2]
 
