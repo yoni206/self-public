@@ -49,6 +49,10 @@ for i in range(num_of_actions):
 def key_to_str(key):
   return str(key[0]) + "_" + str(key[1]) + "_" + str(key[2])
 
+  
+
+
+
 def consistent(preconditions, add_effects, del_effects, trajectories):
   axiom1_instances = []
   axiom2_instances = []
