@@ -1,14 +1,29 @@
 from cvc5.pythonic import *
 import pprint
 
+
+UNKNOWN="unknown"
+unknowns = {}
+
+###################### BEGIN-INPUT-1 ####################
 num_of_state_variables = 2
 num_of_actions = 2
-UNKNOWN="unknown"
+trajectories = [
+ [[True, True], 0, [True, UNKNOWN], 0, [True, False]],
+ [[True, True], 1, [True, False], 1, [True, False]],
+ [[False, True], 0, [False, False], 0, [False, False]]
+]
+###################### END-INPUT-1 ####################
 
-# unknowns
-# unknowns[i][j][k]
-# the value of the state variable k in the jth step of trajectory i
-unknowns = {}
+# ###################### BEGIN-INPUT-2 ####################
+# num_of_state_variables = 1
+# num_of_actions = 1
+# trajectories = [
+#   [[True],0,[UNKNOWN]],
+#   [[False],0,[UNKNOWN]]
+# ]
+# ###################### END-INPUT-2 ####################
+
 
 
 # effects
@@ -30,17 +45,6 @@ for i in range(num_of_actions):
     new_precon_var = Bool("f" + str(s) + "_in_precon_of_action_" + str(i))
     preconditions[(i,s)] = new_precon_var
 
-
-# A set of trajectories. Each trajectory is a list. 
-# But here we do a list of trajectories becausei lists are not hashable.
-trajectories = [
-# first trajectory
-[[True, True], 0, [True, UNKNOWN], 0, [True, False]],
-[[True, True], 1, [True, False], 1, [True, False]],
-# ...
-# last trajectory
-[[False, True], 0, [False, False], 0, [False, False]]
-]
 
 def key_to_str(key):
   return str(key[0]) + "_" + str(key[1]) + "_" + str(key[2])
@@ -92,12 +96,7 @@ def consistent(preconditions, add_effects, del_effects, trajectories):
 
   return And(axiom1_instances + axiom2_instances)
 
-# the action model given by the preconditions is safe for plans that have n steps
-# def safe(n, preconditions, trajectories):
-#   steps = {}
-#   for i in range(0, n):
-#     steps[i] = Bool("step" + str(i))
-#   is_safe = Forall(steps, Implies(consistent(steps, preconditions), Forall(... bbaaaa)))
+
 
 def count_trues(action_model):
   result = 0
@@ -113,10 +112,7 @@ result = consistent(preconditions, add_effects, del_effects, trajectories)
 solver.add(result)
 result = solver.check()
 action_models_and_num_of_trues = []
-num_of_models = 0
 while result == sat:
-  num_of_models += 1
-  print("panda", num_of_models)
   model = solver.model()
   dict_model = {decl:model[decl] for decl in model}
   action_models_and_num_of_trues += [(dict_model, count_trues(model))]
