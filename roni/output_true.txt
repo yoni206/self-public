@@ -1,0 +1,4121 @@
+pre_value_term True
+post_value_term True
+pre_value_term True
+post_value_term True
+pre_value_term True
+post_value_term True
+pre_value_term True
+post_value_term True
+pre_value_term True
+post_value_term True
+pre_value_term True
+post_value_term True
+pre_value_term True
+post_value_term True
+pre_value_term True
+post_value_term True
+pre_value_term True
+post_value_term True
+pre_value_term True
+post_value_term True
+pre_value_term True
+post_value_term True
+pre_value_term True
+post_value_term True
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  1
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  2
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  3
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  4
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  5
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  6
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  7
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  8
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  9
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  10
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  11
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  12
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  13
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  14
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  15
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  16
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  17
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  18
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  19
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  20
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  21
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  22
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  23
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  24
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  25
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  26
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  27
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  28
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  29
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  30
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  31
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  32
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  33
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  34
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  35
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  36
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  37
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  38
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  39
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  40
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  41
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  42
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  43
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  44
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  45
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  46
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  47
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  48
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  49
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  50
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  51
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  52
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  53
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  54
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  55
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  56
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  57
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  58
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  59
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  60
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  61
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  62
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  63
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  64
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  65
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  66
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  67
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  68
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  69
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  70
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  71
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  72
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  73
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  74
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  75
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  76
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  77
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  78
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  79
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  80
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  81
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  82
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  83
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  84
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  85
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  86
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  87
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  88
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  89
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  90
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  91
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  92
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  93
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  94
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  95
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  96
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  97
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  98
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  99
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  100
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  101
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  102
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  103
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  104
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  105
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  106
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  107
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  108
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  109
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  110
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  111
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  112
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  113
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  114
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  115
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  116
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  117
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  118
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  119
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  120
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  121
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  122
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  123
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  124
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  125
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  126
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  127
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  128
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = True
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  129
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  130
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  131
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  132
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  133
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  134
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  135
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  136
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  137
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  138
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  139
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  140
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  141
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  142
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  143
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  144
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  145
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  146
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  147
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  148
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  149
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  150
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  151
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  152
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  153
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  154
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  155
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  156
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  157
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  158
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  159
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  160
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  161
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  162
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  163
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  164
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  165
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  166
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  167
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  168
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  169
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  170
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  171
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  172
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  173
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  174
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  175
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  176
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  177
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = True]
+number of models:  178
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  179
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  180
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  181
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  182
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  183
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  184
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  185
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  186
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  187
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  188
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  189
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  190
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  191
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  192
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = True
+ f1_in_precon_of_action_1 = False]
+number of models:  193
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  194
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  195
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  196
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  197
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  198
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  199
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  200
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  201
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  202
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  203
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  204
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  205
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  206
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  207
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  208
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  209
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  210
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  211
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  212
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  213
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  214
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  215
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  216
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  217
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  218
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  219
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  220
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  221
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  222
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  223
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  224
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = True
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  225
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  226
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  227
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  228
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  229
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  230
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  231
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  232
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  233
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  234
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  235
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  236
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  237
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  238
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  239
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  240
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = True]
+number of models:  241
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  242
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  243
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  244
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  245
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  246
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  247
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  248
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = True
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  249
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  250
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  251
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  252
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = True
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  253
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = False
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  254
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = True
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  255
+**********************
+
+action model:
+[f0_in_add_eff_of_action_0 = False
+ f0_in_add_eff_of_action_1 = False
+ f0_in_del_eff_of_action_0 = False
+ f0_in_del_eff_of_action_1 = False
+ f0_in_precon_of_action_0 = False
+ f0_in_precon_of_action_1 = False
+ f1_in_add_eff_of_action_0 = False
+ f1_in_add_eff_of_action_1 = True
+ f1_in_del_eff_of_action_0 = False
+ f1_in_del_eff_of_action_1 = False
+ f1_in_precon_of_action_0 = False
+ f1_in_precon_of_action_1 = False]
+number of models:  256
+safe model:  {f0_in_precon_of_action_0: True, f0_in_add_eff_of_action_0: False, f0_in_del_eff_of_action_0: False, f1_in_precon_of_action_0: True, f1_in_add_eff_of_action_0: False, f1_in_del_eff_of_action_0: False, f0_in_precon_of_action_1: True, f0_in_add_eff_of_action_1: False, f0_in_del_eff_of_action_1: False, f1_in_precon_of_action_1: True, f1_in_add_eff_of_action_1: False, f1_in_del_eff_of_action_1: False}
