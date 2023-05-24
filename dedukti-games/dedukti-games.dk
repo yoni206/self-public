@@ -1,0 +1,26 @@
+Term : Type.
+Prop : Type.
+def prf  : Prop -> Type.
+
+true : Prop.
+false: Prop.
+
+def not : Prop -> Prop.
+def and : Prop -> Prop -> Prop.
+def or  : Prop -> Prop -> Prop.
+def imp : Prop -> Prop -> Prop.
+
+[a,b,c] and (and a b) c --> (and a (and b c)).
+
+[a,b] prf (and a b) --> prf a.
+[a,b] prf (and a b) --> prf b.
+
+
+A: Prop.
+B: Prop.
+C: Prop.
+
+def and_elim : (A : Prop) -> prf (and (A A))  -> 
+prf A :=
+  A : Prop => p: prf (and (A A)) => p.
+
