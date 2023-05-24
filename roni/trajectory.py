@@ -126,6 +126,7 @@ solver.add(result)
 result = solver.check()
 models = []
 while result == sat:
+  m = {}
   model = solver.model()
   print("**********************\n")
   print("action model:")
@@ -140,13 +141,14 @@ while result == sat:
     variables += [p]
   for p in variables:
         model_val = model[p]
+        m[p] = model_val
         if model_val == True:
           model_values += [p]
         else:
           model_values += [Not(p)]
+  models.append(m)
   model_formula = And(model_values)
   block_model = Not(model_formula)
-  models.append(model)
   print("number of models: ", len(models))
   solver.add(block_model)
   result = solver.check()
@@ -154,7 +156,7 @@ while result == sat:
 # safety: preconditions
 safe_model = {}
 ambiguous_actions = set([])
-for i in num_of_actions:
+for i in range(num_of_actions):
   for j in range(num_of_state_variables):
     precon_var = preconditions[(i,j)]
     add_effect_var = add_effects[(i,j)]
@@ -171,13 +173,17 @@ for i in num_of_actions:
           expected_value_add = m[add_effect_var]
       if expected_value_del == None:
           expected_value_del = m[del_effect_var]
-      if m[add_effect_var] != expected_value_add:
+      if str(m[add_effect_var]) != str(expected_value_add):
         ambiguous_actions.add(i)
-      if m[del_effect_var] != expected_value_del:
+      else:
+        safe_model[add_effect_var] = expected_value_add
+      if str(m[del_effect_var]) != str(expected_value_del):
         ambiguous_actions.add(i)
+      else:
+        safe_model[del_effect_var] = expected_value_del
         break
     
-
+print("safe model: ", safe_model)
 # safety: actions
 
 
