@@ -9,11 +9,21 @@ unknowns = {}
 num_of_state_variables = 2
 num_of_actions = 2
 trajectories = [
- [[True, True], 0, [True, UNKNOWN], 0, [True, False]],
- [[True, True], 1, [True, False], 1, [True, False]],
- [[False, True], 0, [False, False], 0, [False, False]]
+ [[UNKNOWN, UNKNOWN], 0, [UNKNOWN, UNKNOWN], 0, [UNKNOWN, UNKNOWN]],
+ [[UNKNOWN, UNKNOWN], 1, [UNKNOWN, UNKNOWN], 1, [UNKNOWN, UNKNOWN]],
+ [[UNKNOWN, UNKNOWN], 0, [UNKNOWN, UNKNOWN], 0, [UNKNOWN, UNKNOWN]]
 ]
 ###################### END-INPUT-1 ####################
+
+# ###################### BEGIN-INPUT-1 ####################
+# num_of_state_variables = 2
+# num_of_actions = 2
+# trajectories = [
+#  [[True, True], 0, [True, UNKNOWN], 0, [True, False]],
+#  [[True, True], 1, [True, False], 1, [True, False]],
+#  [[False, True], 0, [False, False], 0, [False, False]]
+# ]
+# ###################### END-INPUT-1 ####################
 
 # ###################### BEGIN-INPUT-2 ####################
 # num_of_state_variables = 1
@@ -48,10 +58,6 @@ for i in range(num_of_actions):
 
 def key_to_str(key):
   return str(key[0]) + "_" + str(key[1]) + "_" + str(key[2])
-
-  
-
-
 
 def consistent(preconditions, add_effects, del_effects, trajectories):
   axiom1_instances = []
@@ -93,7 +99,10 @@ def consistent(preconditions, add_effects, del_effects, trajectories):
         del_effect_var = del_effects[(action, i)]
         axiom2_part1 = Implies(add_effect_var, post_value_term)
         axiom2_part2 = Implies(del_effect_var, Not(post_value_term))
-        axiom2_part3 = Implies(Not(Or(add_effect_var, del_effect_var)), pre_value_term==post_value)
+        print("pre_value_term", pre_value_term)
+        print("post_value_term", post_value_term)
+        iff = And(Implies(pre_value_term, post_value_term), Implies(post_value_term, pre_value_term))
+        axiom2_part3 = Implies(Not(Or(add_effect_var, del_effect_var)), iff)
         axiom2 = And(axiom2_part1, axiom2_part2, axiom2_part3)
         axiom2_instances += [axiom2]
 
@@ -115,11 +124,9 @@ result = consistent(preconditions, add_effects, del_effects, trajectories)
 
 solver.add(result)
 result = solver.check()
-action_models_and_num_of_trues = []
+models = []
 while result == sat:
   model = solver.model()
-  dict_model = {decl:model[decl] for decl in model}
-  action_models_and_num_of_trues += [(dict_model, count_trues(model))]
   print("**********************\n")
   print("action model:")
   print("\n".join(str(model).split(",")))
@@ -137,18 +144,42 @@ while result == sat:
           model_values += [p]
         else:
           model_values += [Not(p)]
-  block_model = Not(And(model_values))
+  model_formula = And(model_values)
+  block_model = Not(model_formula)
+  models.append(model)
+  print("number of models: ", len(models))
   solver.add(block_model)
   result = solver.check()
 
-safe_models = []
-max_trues = max(amanoft[1] for amanoft in action_models_and_num_of_trues)
-safe_models = [amanoft[0] for amanoft in action_models_and_num_of_trues if amanoft[1]==max_trues]
-assert(len(safe_models) == 1)
-for safe_model in safe_models:
-  print("***********")
-  print("safe model:")
-  print("\n".join(str(safe_model).split(",")))
+# safety: preconditions
+safe_model = {}
+ambiguous_actions = set([])
+for i in num_of_actions:
+  for j in range(num_of_state_variables):
+    precon_var = preconditions[(i,j)]
+    add_effect_var = add_effects[(i,j)]
+    del_effect_var = del_effects[(i,j)]
+    safe_model[precon_var] = False
+    for m in models:
+      if m[precon_var] == True:
+        safe_model[precon_var] = True
+        break
+    expected_value_add = None
+    expected_value_del = None
+    for m in models:
+      if expected_value_add == None:
+          expected_value_add = m[add_effect_var]
+      if expected_value_del == None:
+          expected_value_del = m[del_effect_var]
+      if m[add_effect_var] != expected_value_add:
+        ambiguous_actions.add(i)
+      if m[del_effect_var] != expected_value_del:
+        ambiguous_actions.add(i)
+        break
+    
+
+# safety: actions
+
 
 
 
