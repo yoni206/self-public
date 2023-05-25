@@ -9,9 +9,9 @@ unknowns = {}
 num_of_state_variables = 2
 num_of_actions = 2
 trajectories = [
- [[UNKNOWN, UNKNOWN], 0, [UNKNOWN, UNKNOWN], 0, [UNKNOWN, UNKNOWN]],
- [[UNKNOWN, UNKNOWN], 1, [UNKNOWN, UNKNOWN], 1, [UNKNOWN, UNKNOWN]],
- [[UNKNOWN, UNKNOWN], 0, [UNKNOWN, UNKNOWN], 0, [UNKNOWN, UNKNOWN]]
+ [[True, True], 0, [True, True], 0, [True, True]],
+ [[True, True], 1, [True, True], 1, [True, True]],
+ [[True, True], 0, [True, True], 0, [True, True]]
 ]
 ###################### END-INPUT-1 ####################
 
@@ -184,6 +184,7 @@ for i in range(num_of_actions):
         break
     
 print("safe model: ", safe_model)
+print("ambiguous_actions", ambiguous_actions)
 # safety: actions
 
 
