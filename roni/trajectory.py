@@ -1,4 +1,4 @@
-from cvc5.pythonic import *
+from z3 import *
 import pprint
 
 
@@ -9,8 +9,8 @@ unknowns = {}
 num_of_state_variables = 2
 num_of_actions = 2
 trajectories = [
- [[UNKNOWN, UNKNOWN], 0, [UNKNOWN, UNKNOWN], 0, [UNKNOWN, UNKNOWN]],
- [[UNKNOWN, UNKNOWN], 1, [UNKNOWN, UNKNOWN], 1, [UNKNOWN, UNKNOWN]],
+ [[UNKNOWN, UNKNOWN], 0, [True, UNKNOWN], 0, [UNKNOWN, UNKNOWN]],
+ [[UNKNOWN, False], 1, [UNKNOWN, UNKNOWN], 1, [UNKNOWN, True]],
  [[UNKNOWN, UNKNOWN], 0, [UNKNOWN, UNKNOWN], 0, [UNKNOWN, UNKNOWN]]
 ]
 ###################### END-INPUT-1 ####################
@@ -174,13 +174,26 @@ def qbf_safe_model():
 
 
 
-  existentials = list(existential_add_effects.values()) + list(existential_del_effects.values()) + list(existential_preconditions.values()) + list(existential_unknowns.values())
+  bound_vars = list(existential_add_effects.values()) + list(existential_del_effects.values()) + list(existential_preconditions.values()) + list(existential_unknowns.values())
   for i in range(num_of_actions):
     for s in range(num_of_state_variables):
-      exists = Exists(existentials, And(consistent(existential_preconditions, existential_add_effects, existential_del_effects, trajectories, existential_unknowns), existential_preconditions[(i,s)]))
-      eq = preconditions[(i,s)]
-      formula = Implies(exists, eq)
-      solver.add(formula)
+      exists_precon = Exists(bound_vars, And(consistent(existential_preconditions, existential_add_effects, existential_del_effects, trajectories, existential_unknowns), existential_preconditions[(i,s)]))
+      eq1 = preconditions[(i,s)]
+      # exists m' . m' is consistent and in it, s is a precon of i ===> s is a precon of i in the (safe)  model that we are searching for. 
+      formula_precon = And(Implies(exists_precon, eq1), Implies(eq1, exists_precon))
+
+      forall_add_eff = ForAll(bound_vars, Implies(consistent(existential_preconditions, existential_add_effects, existential_del_effects, trajectories, existential_unknowns), existential_add_effects[(i,s)]))
+      eq2 = add_effects[(i,s)]
+      formula_add_eff = And(Implies(forall_add_eff, eq2), Implies(eq2, forall_add_eff))
+
+
+      forall_del_eff = ForAll(bound_vars, Implies(consistent(existential_preconditions, existential_add_effects, existential_del_effects, trajectories, existential_unknowns), existential_del_effects[(i,s)]))
+      eq3 = del_effects[(i,s)]
+      formula_del_eff = And(Implies(forall_del_eff, eq3), Implies(eq3, forall_del_eff))
+
+      solver.add(formula_precon)
+      solver.add(formula_add_eff)
+      solver.add(formula_del_eff)
   result = solver.check()
   if result != sat:
       print("no consistent models")
