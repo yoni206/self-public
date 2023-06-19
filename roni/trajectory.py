@@ -1,4 +1,4 @@
-from z3 import *
+from cvc5.pythonic import *
 import pprint
 
 
@@ -119,6 +119,8 @@ def relatively_brute_force():
   print("ambiguous_actions", ambiguous_actions)
 
 
+
+
 def qbf_safe_model():
     # new variables for safe model (for each i,j):
     #  - add_eff, del_eff, precon
@@ -191,9 +193,13 @@ def qbf_safe_model():
       eq3 = del_effects[(i,s)]
       formula_del_eff = And(Implies(forall_del_eff, eq3), Implies(eq3, forall_del_eff))
 
+      never_add_eff = ForAll(bound_vars, Implies(consistent(existential_preconditions, existential_add_effects, existential_del_effects, trajectories, existential_unknowns), Not(existential_add_effects[(i,s)])))
+      formula_good_actions = is_good_action[(i,s)] == Or(forall_add_eff, never_add_eff)
+
       solver.add(formula_precon)
       solver.add(formula_add_eff)
       solver.add(formula_del_eff)
+      solver.add(formula_good_actions)
   result = solver.check()
   if result != sat:
       print("no consistent models")
@@ -223,6 +229,11 @@ for i in range(num_of_actions):
   for s in range(num_of_state_variables):
     new_precon_var = Bool("f" + str(s) + "_in_precon_of_action_" + str(i))
     preconditions[(i,s)] = new_precon_var
+
+is_good_action = {}
+for i in range(num_of_actions):
+  for s in range(num_of_state_variables):
+    is_good_action[(i,s)] = Bool("a" + str(i) + "_is_a_good_action_for_f" + str(i))
 
 
 def key_to_str(key):
