@@ -15,7 +15,7 @@ trajectories = [
 ]
 ###################### END-INPUT-1 ####################
 
-# ###################### BEGIN-INPUT-1 ####################
+###################### BEGIN-INPUT-1 ####################
 # num_of_state_variables = 2
 # num_of_actions = 2
 # trajectories = [
@@ -23,9 +23,9 @@ trajectories = [
 #  [[True, True], 1, [True, False], 1, [True, False]],
 #  [[False, True], 0, [False, False], 0, [False, False]]
 # ]
-# ###################### END-INPUT-1 ####################
+###################### END-INPUT-1 ####################
 
-# ###################### BEGIN-INPUT-2 ####################
+# ####################### BEGIN-INPUT-2 ####################
 # num_of_state_variables = 1
 # num_of_actions = 1
 # trajectories = [
@@ -194,7 +194,14 @@ def qbf_safe_model():
       formula_del_eff = And(Implies(forall_del_eff, eq3), Implies(eq3, forall_del_eff))
 
       never_add_eff = ForAll(bound_vars, Implies(consistent(existential_preconditions, existential_add_effects, existential_del_effects, trajectories, existential_unknowns), Not(existential_add_effects[(i,s)])))
-      formula_good_actions = is_good_action[(i,s)] == Or(forall_add_eff, never_add_eff)
+      
+      never_del_eff = ForAll(bound_vars, Implies(consistent(existential_preconditions, existential_add_effects, existential_del_effects, trajectories, existential_unknowns), Not(existential_del_effects[(i,s)])))
+      
+      or_add = Or(forall_add_eff, never_add_eff)
+      or_del = Or(forall_del_eff, never_del_eff)
+      and_or = And(or_add, or_del)
+
+      formula_good_actions = And(Implies(is_good_action[(i,s)], and_or), Implies(and_or, is_good_action[(i,s)]))
 
       solver.add(formula_precon)
       solver.add(formula_add_eff)
@@ -233,7 +240,7 @@ for i in range(num_of_actions):
 is_good_action = {}
 for i in range(num_of_actions):
   for s in range(num_of_state_variables):
-    is_good_action[(i,s)] = Bool("a" + str(i) + "_is_a_good_action_for_f" + str(i))
+    is_good_action[(i,s)] = Bool("a" + str(i) + "_is_a_good_action_for_f" + str(s))
 
 
 def key_to_str(key):
