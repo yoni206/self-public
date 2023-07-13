@@ -1,7 +1,11 @@
+from io import StringIO
+from pysmt.smtlib.parser import SmtLibParser
 import pysmt.operators as op
-from translators_k import *
 from pysmt.shortcuts import Symbol, Or, ForAll, GE, LT, Real, Plus
 from pysmt.walkers import IdentityDagWalker
+from pysmt import walkers
+import sys
+from pysmt import operators
 
 numbers = {}
 
@@ -9,14 +13,14 @@ numbers = {}
 class CountingWalker(IdentityDagWalker):
     @walkers.handles(set(op.ALL_TYPES) - op.QUANTIFIERS)
     def walk_all(self, formula, args, **kwargs):
-        o = formula.get_op()
+        o = operators.op_to_str(formula.node_type())
         if o not in numbers:
           numbers[o] = 1
         else:
           numbers[o] += 1
         return formula
 
-path = sys.args[1]
+path = sys.argv[1]
 with open(path, 'r') as f:
   smtlib_string = f.read()
 
