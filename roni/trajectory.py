@@ -75,6 +75,55 @@ def naive_safe_model(models):
           safe_model[del_effect_var] = expected_value_del
   return safe_model, ambiguous_actions
 
+
+
+# M -- the safe model candidate
+# Mprimt -- one of the consistent models
+def complicated_check(Mprime, M):
+  for i in range(num_of_actions):
+    for j in range(num_of_state_variables):
+      precon_var = preconditions[(i,j)]
+      add_effect_var = add_effects[(i,j)]
+      del_effect_var = del_effects[(i,j)]
+      is_in_precon_of_m = M[precon_var]
+      is_in_precon_of_mprime = Mprime[precon_var]
+      is_in_add_effect_of_m = M[add_effect_var] 
+      is_in_add_effect_of_mprime = Mprime[add_effect_var] 
+      is_in_del_effect_of_m = M[del_effect_var] 
+      is_in_del_effect_of_mprime = Mprime[del_effect_var] 
+
+      second_if = is_in_add_effect_of_m and is_in_del_effect_of_mprime
+
+      if not is_in_precon_of_m and is_in_precon_of_mprime:
+          return True
+
+      if is_in_add_effect_of_m and is_in_del_effect_of_mprime:
+          return True
+
+      if is_in_add_effect_of_m and not is_in_add_effect_of_mprime:
+          if is_in_precon_of_mprime:
+            print("no worries")
+          else: 
+            return True
+      
+      if is_in_add_effect_of_mprime and not is_in_add_effect_of_m:
+          if is_in_precon_of_m:
+            print("no worries")
+          else:
+            return True
+
+  return False
+
+
+
+def is_safe(consistent_models, model):
+    result = True
+    for cm in consistent_models:
+        if complicated_check(cm, model):
+            result = False
+            break
+    return result
+
 def relatively_brute_force():
   result = consistent(preconditions, add_effects, del_effects, trajectories, unknowns)
   
@@ -113,6 +162,10 @@ def relatively_brute_force():
     result = solver.check()
   
     safe_model, ambiguous_actions = naive_safe_model(models)
+    if is_safe(models, safe_model):
+      print("indeed safe")
+    else:
+      print("reported safe but is not safe")
   
       
   print("safe model: ", safe_model)
@@ -299,4 +352,5 @@ def consistent(preconditions, add_effects, del_effects, trajectories, local_unkn
 
 solver = Solver()
 # relatively_brute_force()
-qbf_safe_model()
+# qbf_safe_model()
+relatively_brute_force()
