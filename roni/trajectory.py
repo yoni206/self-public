@@ -5,25 +5,25 @@ import pprint
 UNKNOWN="unknown"
 unknowns = {}
 
-###################### BEGIN-INPUT-1 ####################
-num_of_state_variables = 2
-num_of_actions = 2
-trajectories = [
- [[UNKNOWN, UNKNOWN], 0, [True, UNKNOWN], 0, [UNKNOWN, UNKNOWN]],
- [[UNKNOWN, False], 1, [UNKNOWN, UNKNOWN], 1, [UNKNOWN, True]],
- [[UNKNOWN, UNKNOWN], 0, [UNKNOWN, UNKNOWN], 0, [UNKNOWN, UNKNOWN]]
-]
-###################### END-INPUT-1 ####################
-
-###################### BEGIN-INPUT-1 ####################
+# ###################### BEGIN-INPUT-1 ####################
 # num_of_state_variables = 2
 # num_of_actions = 2
 # trajectories = [
-#  [[True, True], 0, [True, UNKNOWN], 0, [True, False]],
-#  [[True, True], 1, [True, False], 1, [True, False]],
-#  [[False, True], 0, [False, False], 0, [False, False]]
+#  [[UNKNOWN, UNKNOWN], 0, [True, UNKNOWN], 0, [UNKNOWN, UNKNOWN]],
+#  [[UNKNOWN, False], 1, [UNKNOWN, UNKNOWN], 1, [UNKNOWN, True]],
+#  [[UNKNOWN, UNKNOWN], 0, [UNKNOWN, UNKNOWN], 0, [UNKNOWN, UNKNOWN]]
 # ]
-###################### END-INPUT-1 ####################
+# ###################### END-INPUT-1 ####################
+
+#################### BEGIN-INPUT-1 ####################
+num_of_state_variables = 2
+num_of_actions = 2
+trajectories = [
+ [[True, True], 0, [True, UNKNOWN], 0, [True, False]],
+ [[True, True], 1, [True, False], 1, [True, False]],
+ [[False, True], 0, [False, False], 0, [False, False]]
+]
+#################### END-INPUT-1 ####################
 
 # ####################### BEGIN-INPUT-2 ####################
 # num_of_state_variables = 1
@@ -32,7 +32,7 @@ trajectories = [
 #   [[True],0,[UNKNOWN]],
 #   [[False],0,[UNKNOWN]]
 # ]
-# ###################### END-INPUT-2 ####################
+###################### END-INPUT-2 ####################
 
 
 
@@ -79,8 +79,10 @@ def naive_safe_model(models):
 
 # M -- the safe model candidate
 # Mprimt -- one of the consistent models
-def complicated_check(Mprime, M):
+def complicated_check(Mprime, M, ambiguous_actions):
   for i in range(num_of_actions):
+    if i in ambiguous_actions:
+      continue
     for j in range(num_of_state_variables):
       precon_var = preconditions[(i,j)]
       add_effect_var = add_effects[(i,j)]
@@ -116,15 +118,17 @@ def complicated_check(Mprime, M):
 
 
 
-def is_safe(consistent_models, model):
+def is_safe(consistent_models, model, ambiguos_actions):
+    if consistent_models == None:
+        consistent_models = compute_all_consistent_models()
     result = True
     for cm in consistent_models:
-        if complicated_check(cm, model):
+        if complicated_check(cm, model, ambiguos_actions):
             result = False
             break
     return result
 
-def relatively_brute_force():
+def compute_all_consistent_models():
   result = consistent(preconditions, add_effects, del_effects, trajectories, unknowns)
   
   solver.add(result)
@@ -160,15 +164,18 @@ def relatively_brute_force():
     print("number of models: ", len(models))
     solver.add(block_model)
     result = solver.check()
+  return models
+
+def relatively_brute_force():
+  models = compute_all_consistent_models()
+  safe_model, ambiguous_actions = naive_safe_model(models)
+  if is_safe(models, safe_model, ambiguous_actions):
+    print("indeed safe")
+  else:
+    print("reported safe but is not safe")
   
-    safe_model, ambiguous_actions = naive_safe_model(models)
-    if is_safe(models, safe_model):
-      print("indeed safe")
-    else:
-      print("reported safe but is not safe")
-  
-      
-  print("safe model: ", safe_model)
+  print("safe model:")
+  print("\n".join(str(safe_model).split(",")))
   print("ambiguous_actions", ambiguous_actions)
 
 
@@ -266,6 +273,10 @@ def qbf_safe_model():
       exit()
   model = solver.model()
   print("\n".join(str(model).split(",")))
+  if is_safe(None, model, ambiguous_actions):
+    print("indeed safe")
+  else:
+    print("reported safe but is not safe")
 
 
 
@@ -352,5 +363,5 @@ def consistent(preconditions, add_effects, del_effects, trajectories, local_unkn
 
 solver = Solver()
 # relatively_brute_force()
-# qbf_safe_model()
-relatively_brute_force()
+qbf_safe_model()
+# relatively_brute_force()
