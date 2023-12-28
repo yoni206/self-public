@@ -1,3 +1,4 @@
+!pip install cvc5
 from cvc5.pythonic import *
 import pprint
 
@@ -34,8 +35,30 @@ trajectories = [
 # ]
 ###################### END-INPUT-2 ####################
 
+############ Define global parameters #################
+# effects
+# effects[i][j]
+# the effect of action i on state var j
+add_effects = {}
+del_effects = {}
+for i in range(num_of_actions):
+  for s in range(num_of_state_variables):
+    new_add_eff_var = Bool("f" + str(s) + "_in_add_eff_of_action_" + str(i))
+    new_del_eff_var = Bool("f" + str(s) + "_in_del_eff_of_action_" + str(i))
+    add_effects[(i,s)] = new_add_eff_var
+    del_effects[(i,s)] = new_del_eff_var
 
+# preconditions
+preconditions = {}
+for i in range(num_of_actions):
+  for s in range(num_of_state_variables):
+    new_precon_var = Bool("f" + str(s) + "_in_precon_of_action_" + str(i))
+    preconditions[(i,s)] = new_precon_var
 
+is_good_action = {}
+for i in range(num_of_actions):
+  for s in range(num_of_state_variables):
+    is_good_action[(i,s)] = Bool("a" + str(i) + "_is_a_good_action_for_f" + str(s))
 
 
 
@@ -76,6 +99,14 @@ def naive_safe_model(models):
   return safe_model, ambiguous_actions
 
 
+def deep_copy_model(m):
+  result = {}
+  print(m)
+  for var in m.keys():
+    result[var]=m[var]
+  return result
+
+
 
 # M -- the safe model candidate
 # Mprimt -- one of the consistent models
@@ -84,15 +115,16 @@ def complicated_check(Mprime, M, ambiguous_actions):
     if i in ambiguous_actions:
       continue
     for j in range(num_of_state_variables):
+      print(f"Complicted check for {i} and {j}")
       precon_var = preconditions[(i,j)]
       add_effect_var = add_effects[(i,j)]
       del_effect_var = del_effects[(i,j)]
       is_in_precon_of_m = M[precon_var]
       is_in_precon_of_mprime = Mprime[precon_var]
-      is_in_add_effect_of_m = M[add_effect_var] 
-      is_in_add_effect_of_mprime = Mprime[add_effect_var] 
-      is_in_del_effect_of_m = M[del_effect_var] 
-      is_in_del_effect_of_mprime = Mprime[del_effect_var] 
+      is_in_add_effect_of_m = M[add_effect_var]
+      is_in_add_effect_of_mprime = Mprime[add_effect_var]
+      is_in_del_effect_of_m = M[del_effect_var]
+      is_in_del_effect_of_mprime = Mprime[del_effect_var]
 
       second_if = is_in_add_effect_of_m and is_in_del_effect_of_mprime
 
@@ -105,9 +137,9 @@ def complicated_check(Mprime, M, ambiguous_actions):
       if is_in_add_effect_of_m and not is_in_add_effect_of_mprime:
           if is_in_precon_of_mprime:
             print("no worries")
-          else: 
+          else:
             return True
-      
+
       if is_in_add_effect_of_mprime and not is_in_add_effect_of_m:
           if is_in_precon_of_m:
             print("no worries")
@@ -130,7 +162,7 @@ def is_safe(consistent_models, model, ambiguos_actions):
 
 def compute_all_consistent_models():
   result = consistent(preconditions, add_effects, del_effects, trajectories, unknowns)
-  
+
   solver.add(result)
   result = solver.check()
   if result != sat:
@@ -158,7 +190,7 @@ def compute_all_consistent_models():
             model_values += [p]
           else:
             model_values += [Not(p)]
-    models.append(m)
+    models.append(deep_copy_model(m))
     model_formula = And(model_values)
     block_model = Not(model_formula)
     print("number of models: ", len(models))
@@ -173,7 +205,7 @@ def relatively_brute_force():
     print("indeed safe")
   else:
     print("reported safe but is not safe")
-  
+
   print("safe model:")
   print("\n".join(str(safe_model).split(",")))
   print("ambiguous_actions", ambiguous_actions)
@@ -185,7 +217,7 @@ def qbf_safe_model():
     # new variables for safe model (for each i,j):
     #  - add_eff, del_eff, precon
     # forall action and state variable, if there is a model
-    # for which the state variable is in the precon for 
+    # for which the state variable is in the precon for
     # the action, then the state variable is also a precon
     # to the action in the safe model
 
@@ -205,7 +237,7 @@ def qbf_safe_model():
       new_precon_var = Bool("existential_f" + str(s) + "_in_precon_of_action_" + str(i))
       existential_preconditions[(i,s)] = new_precon_var
 
-  
+
   # unkowns
   existential_unknowns = {}
   for i in range(num_of_state_variables):
@@ -241,7 +273,7 @@ def qbf_safe_model():
     for s in range(num_of_state_variables):
       exists_precon = Exists(bound_vars, And(consistent(existential_preconditions, existential_add_effects, existential_del_effects, trajectories, existential_unknowns), existential_preconditions[(i,s)]))
       eq1 = preconditions[(i,s)]
-      # exists m' . m' is consistent and in it, s is a precon of i ===> s is a precon of i in the (safe)  model that we are searching for. 
+      # exists m' . m' is consistent and in it, s is a precon of i ===> s is a precon of i in the (safe)  model that we are searching for.
       formula_precon = And(Implies(exists_precon, eq1), Implies(eq1, exists_precon))
 
       forall_add_eff = ForAll(bound_vars, Implies(consistent(existential_preconditions, existential_add_effects, existential_del_effects, trajectories, existential_unknowns), existential_add_effects[(i,s)]))
@@ -254,9 +286,9 @@ def qbf_safe_model():
       formula_del_eff = And(Implies(forall_del_eff, eq3), Implies(eq3, forall_del_eff))
 
       never_add_eff = ForAll(bound_vars, Implies(consistent(existential_preconditions, existential_add_effects, existential_del_effects, trajectories, existential_unknowns), Not(existential_add_effects[(i,s)])))
-      
+
       never_del_eff = ForAll(bound_vars, Implies(consistent(existential_preconditions, existential_add_effects, existential_del_effects, trajectories, existential_unknowns), Not(existential_del_effects[(i,s)])))
-      
+
       or_add = Or(forall_add_eff, never_add_eff)
       or_del = Or(forall_del_eff, never_del_eff)
       and_or = And(or_add, or_del)
@@ -272,39 +304,27 @@ def qbf_safe_model():
       print("no consistent models")
       exit()
   model = solver.model()
+  ambiguous_actions = set()
+  for i in range(num_of_actions):
+    for s in range(num_of_state_variables):
+      if model[is_good_action[(i,s)]]==False:
+        ambiguous_actions.add(i)
+        print(f"Action {i} is ambiguous due to state var {s}")
+        break
+  print("-------------------------- Ambi")
+  print(ambiguous_actions)
+  print("-------------------------- Ambi")
   print("\n".join(str(model).split(",")))
+
   if is_safe(None, model, ambiguous_actions):
     print("indeed safe")
   else:
     print("reported safe but is not safe")
 
+  return model, ambiguous_actions
 
 
 
-
-# effects
-# effects[i][j]
-# the effect of action i on state var j
-add_effects = {}
-del_effects = {}
-for i in range(num_of_actions):
-  for s in range(num_of_state_variables):
-    new_add_eff_var = Bool("f" + str(s) + "_in_add_eff_of_action_" + str(i))
-    new_del_eff_var = Bool("f" + str(s) + "_in_del_eff_of_action_" + str(i))
-    add_effects[(i,s)] = new_add_eff_var
-    del_effects[(i,s)] = new_del_eff_var
-
-# preconditions
-preconditions = {}
-for i in range(num_of_actions):
-  for s in range(num_of_state_variables):
-    new_precon_var = Bool("f" + str(s) + "_in_precon_of_action_" + str(i))
-    preconditions[(i,s)] = new_precon_var
-
-is_good_action = {}
-for i in range(num_of_actions):
-  for s in range(num_of_state_variables):
-    is_good_action[(i,s)] = Bool("a" + str(i) + "_is_a_good_action_for_f" + str(s))
 
 
 def key_to_str(key):
@@ -341,7 +361,7 @@ def consistent(preconditions, add_effects, del_effects, trajectories, local_unkn
 
         axiom1 = Implies(precondition_var, pre_value_term)
         axiom1_instances += [axiom1]
-      
+
       # axiom 2:
       # if fi is in add effect of action, then fi must be true in the next state
       # if fi is in del effect of action, then fi must be false in the next state
