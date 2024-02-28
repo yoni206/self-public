@@ -1,0 +1,11 @@
+(set-logic ALL)
+
+(declare-datatype Sort ((unary  (param Sort)) (nullary)))
+(synth-fun f1 ((x0 Sort)) Sort)
+(synth-fun f2 ((x0 Sort)) Sort)
+
+(declare-var p Sort)
+(declare-var x Sort)
+(constraint (=> (= x (unary p)) (and (= (f1 p) nullary) (= x (unary (f2 p))))))
+
+(check-synth)
