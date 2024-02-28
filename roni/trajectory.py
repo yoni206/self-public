@@ -1,10 +1,37 @@
-!pip install cvc5
+# !pip install cvc5
 from cvc5.pythonic import *
 import pprint
 
 
 UNKNOWN="unknown"
 unknowns = {}
+
+def pp_model(m):
+  print("=====================")
+  for i in range(num_of_actions):
+    pc = []
+    add = []
+    dl = []
+    good = []
+    for j in range(num_of_state_variables):
+      if m[preconditions[(i,j)]]:
+        pc += [j]
+      if m[add_effects[(i,j)]]:
+          add += [j]
+      if m[del_effects[(i,j)]]:
+          dl += [j]
+      if m[is_good_action[(i,j)]]:
+          good += [j]
+    print("Data for action " + str(i))
+    print("-----------------------")
+    print("preconditions: " + str(pc))
+    print("add effects: " + str(add))
+    print("del effects: " + str(dl))
+    print("the action is good (unambiguos) for: " + str(good))
+    print("-----------------------")
+    print()
+
+
 
 # ###################### BEGIN-INPUT-1 ####################
 # num_of_state_variables = 2
@@ -101,8 +128,8 @@ def naive_safe_model(models):
 
 def deep_copy_model(m):
   result = {}
-  print(m)
-  for var in m.keys():
+  keys = m.keys() if type(m) == dict else m.decls()
+  for var in keys:
     result[var]=m[var]
   return result
 
@@ -115,7 +142,6 @@ def complicated_check(Mprime, M, ambiguous_actions):
     if i in ambiguous_actions:
       continue
     for j in range(num_of_state_variables):
-      print(f"Complicted check for {i} and {j}")
       precon_var = preconditions[(i,j)]
       add_effect_var = add_effects[(i,j)]
       del_effect_var = del_effects[(i,j)]
@@ -174,7 +200,7 @@ def compute_all_consistent_models():
     model = solver.model()
     print("**********************\n")
     print("action model:")
-    print("\n".join(str(model).split(",")))
+    pp_model(model)
     model_values = []
     variables = []
     for p in preconditions.values():
@@ -201,13 +227,14 @@ def compute_all_consistent_models():
 def relatively_brute_force():
   models = compute_all_consistent_models()
   safe_model, ambiguous_actions = naive_safe_model(models)
+  safe_model = deep_copy_model(safe_model)
   if is_safe(models, safe_model, ambiguous_actions):
     print("indeed safe")
   else:
     print("reported safe but is not safe")
 
   print("safe model:")
-  print("\n".join(str(safe_model).split(",")))
+  pp_model(safe_model)
   print("ambiguous_actions", ambiguous_actions)
 
 
@@ -276,7 +303,7 @@ def qbf_safe_model():
       # exists m' . m' is consistent and in it, s is a precon of i ===> s is a precon of i in the (safe)  model that we are searching for.
       formula_precon = And(Implies(exists_precon, eq1), Implies(eq1, exists_precon))
 
-      forall_add_eff = ForAll(bound_vars, Implies(consistent(existential_preconditions, existential_add_effects, existential_del_effects, trajectories, existential_unknowns), existential_add_effects[(i,s)]))
+      forall_add_eff = Implies(Not(Exists(bound_vars, And(consistent(existential_preconditions, existential_add_effects, existential_del_effects, trajectories, existential_unknowns), existential_preconditions[(i,s)]))), ForAll(bound_vars, Implies(consistent(existential_preconditions, existential_add_effects, existential_del_effects, trajectories, existential_unknowns), existential_add_effects[(i,s)])))
       eq2 = add_effects[(i,s)]
       formula_add_eff = And(Implies(forall_add_eff, eq2), Implies(eq2, forall_add_eff))
 
@@ -316,7 +343,7 @@ def qbf_safe_model():
   print("-------------------------- Ambi")
   print("\n".join(str(model).split(",")))
 
-  if is_safe(None, model, ambiguous_actions):
+  if is_safe(None, deep_copy_model(model), ambiguous_actions):
     print("indeed safe")
   else:
     print("reported safe but is not safe")
