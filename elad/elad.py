@@ -21,6 +21,8 @@ formula = ForAll([param := fresh_var(), x := fresh_var()],
 # Why isn't f1 = [else -> Nullary], f2 = [else -> Var(0)] a model?
 
 s = Solver()
+s.set("sygus-inference", "true")
+s.set("incremental", "false")
 if s.__module__ == "z3.z3":
     s.set(timeout=120)
 else:
