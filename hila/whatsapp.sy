@@ -1,0 +1,37 @@
+(set-option :sygus-verify-inst-max-rounds -1)
+(set-logic LIA)
+(synth-fun lower ((x Int) (y Int)) Int
+( (INT Int))
+  (
+   (INT Int  (
+     x
+     y
+     0
+     1
+     (- INT)
+     (+ INT INT)
+   ))
+))
+
+(synth-fun upper ((x Int) (y Int)) Int
+( (INT Int))
+  (
+   (INT Int  (
+     x
+     y
+     0
+     1
+     (- INT)
+     (+ INT INT)
+   ))
+))
+
+(declare-var x Int)
+(declare-var y Int)
+(define-fun P ((x Int) (y Int) ) Bool (< x 10))
+(define-fun S ((x Int) (y Int) ) Bool (and (< y x) (< 0 y)))
+(define-fun b ((x Int) (y Int) ) Bool (and (<= (lower x y) y) (<= y (upper x y))))
+(constraint (=> (P x y) (=> (S x y) (b x y))))
+(constraint (=> (P x y) (=>  (b x y) (exists ((xx Int) (yy Int)) (S xx yy)))))
+(check-synth)
+
