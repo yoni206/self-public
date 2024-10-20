@@ -1,6 +1,6 @@
 (set-option :sygus-verify-inst-max-rounds -1)
 (set-option :sygus-grammar-cons any-const)
-(set-option :sygus-abort-size 101)
+(set-option :sygus-abort-size 4)
 (set-option :incremental false)
 
 (set-logic ALL)
@@ -10,7 +10,7 @@
    (START Int (
    (+ START START) 
    (- START START) 
-;   0 
+   0 
    1
   ))
 ))
@@ -21,7 +21,7 @@
    (START Int (
     (+ START START) 
 	(- START START) 
-;	0 
+	0 
 	1
   ))
 ))
@@ -31,8 +31,6 @@
 (define-fun P ( ) Bool true)
 (define-fun S ((x Int) (y Int) ) Bool (and (<= (- 100) x) (<= x y) (<= y 100)))
 (define-fun b ((x Int) (y Int) ) Bool (and (<= lower x) (<= x upper)))
-; (=> true (=> (and (<= (- 100) x) (<= x y) (<= y 100)) (and (<= lower x) (<= x upper))))
 (constraint (=> P  (=> (S x y) (b x y))))
-;(=> true (=> (and (<= lower x) (<= x upper)) (exists ((y Int)) (and (<= (- 100) x) (<= x y) (<= y 100)))))
 (constraint (=> P  (=>  (b x y) (exists ((yy Int)) (S x yy)))))
 (check-synth)
