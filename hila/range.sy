@@ -10,8 +10,7 @@
    (START Int (
    (+ START START) 
    (- START START) 
-   0 
-   1
+   (Constant Int)
   ))
 ))
 
@@ -21,8 +20,7 @@
    (START Int (
     (+ START START) 
 	(- START START) 
-	0 
-	1
+	(Constant Int)
   ))
 ))
 
