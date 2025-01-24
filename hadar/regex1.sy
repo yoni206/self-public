@@ -1,0 +1,30 @@
+(set-logic ALL)
+(synth-fun R () RegLan
+  ((Start RegLan) (StartStrC String) (StartRL RegLan) ) (
+  (Start RegLan (
+    (str.to_re StartStrC)
+    (re.inter Start Start)
+    (re.union Start Start)
+    (re.++ Start Start)
+    (re.* Start)
+  ))
+  (StartStrC String (
+    "A" "B" ""
+    (str.++ StartStrC StartStrC)
+  ))
+  (StartRL RegLan (
+    (str.to_re StartStrC)
+    (re.++ StartRL StartRL)
+    (re.inter StartRL StartRL)
+    (re.union StartRL StartRL)
+    (re.* StartRL)
+  ))
+))
+
+(constraint (str.in_re "AAAA" R))
+(constraint (str.in_re "AAA" R))
+(constraint (str.in_re "AA" R))
+(constraint (not (str.in_re "AB" R)))
+(constraint (not (str.in_re "B" R)))
+
+(check-synth)
