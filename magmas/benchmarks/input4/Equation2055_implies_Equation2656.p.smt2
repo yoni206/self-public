@@ -1,0 +1,6 @@
+(declare-sort $$unsorted 0)
+(declare-fun tptp.op ($$unsorted $$unsorted) $$unsorted)
+(assert (forall ((X0 $$unsorted) (X1 $$unsorted) (X2 $$unsorted)) (= X0 (tptp.op (tptp.op (tptp.op X0 X1) X0) (tptp.op X1 X2)))))
+(assert (not (forall ((X0 $$unsorted) (X1 $$unsorted) (X2 $$unsorted)) (= X0 (tptp.op (tptp.op (tptp.op X0 X0) (tptp.op X1 X2)) X1)))))
+(set-info :filename Equation2055_implies_Equation2656)
+(check-sat-assuming ( true ))

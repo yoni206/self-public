@@ -1,0 +1,4 @@
+(declare-sort $$unsorted 0)
+(declare-fun tptp.op ($$unsorted $$unsorted) $$unsorted)
+(assert (forall ((X0 $$unsorted) (X1 $$unsorted) (X2 $$unsorted) (X3 $$unsorted)) (= X0 (tptp.op (tptp.op X1 X0) (tptp.op (tptp.op X1 X2) X0)))))
+(error "Parse Error: benchmarks/input3/Equation1697_implies_Equation2161.p:8.38: Unexpected token: '('.")
