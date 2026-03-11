@@ -1,0 +1,19 @@
+
+(set-logic BV)
+(synth-fun op ((x (_ BitVec 1)) (y (_ BitVec 1))) (_ BitVec 1)
+  ((BV (_ BitVec 1)))
+    (
+     (BV (_ BitVec 1)  (
+       x y 
+       
+       (bvnot BV)
+       (bvand BV  BV) (bvor BV  BV) (bvxor BV  BV) (bvadd BV BV)
+     ))
+    )
+)
+(declare-var x (_ BitVec 1))
+(declare-var y (_ BitVec 1))
+(declare-var z (_ BitVec 1))
+(constraint (and (distinct (op #b0 #b1) #b0)(= x (op x (op y (op (op z x) y))))))
+(check-synth)
+
