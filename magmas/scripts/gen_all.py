@@ -37,7 +37,7 @@ int_sy_template = """
      x0 x1
      0 1
      (- I)
-     (+ I I) (- I I) (* I I)
+     (+ I I) (- I I) (* I I) (div I I) (mod I I)
    ))
   )
 )
@@ -55,7 +55,7 @@ real_sy_template = """
      x0 x1
      0.0 1.0
      (- R)
-     (+ R R) (- R R) (* R R)
+     (+ R R) (- R R) (* R R) (/ R R)
    ))
   )
 )
@@ -126,11 +126,36 @@ def make_eq(pos, neg):
 """
 
 
+CONSTANT_FORMULA = "(exists ((x U)) (forall ((y U) (z U)) (= (op y z) x)))"
+
+
+def make_constant(formula):
+    return UF_HEADER + f"""\
+(assert {make_forall(formula)})
+(assert (not {CONSTANT_FORMULA}))
+(check-sat)
+"""
+
+
 def make_proj(formula, proj):
     proj_formula = PROJ1_FORMULA if proj == 1 else PROJ2_FORMULA
     return UF_HEADER + f"""\
 (assert {make_forall(formula)})
 (assert (not {proj_formula}))
+(check-sat)
+"""
+
+
+def make_arith_check(formula, target_expr, sort):
+    logic = "UFNIA" if sort == "Int" else "UFNRA"
+    vars_ = get_vars(formula)
+    bindings = " ".join(f"({v} {sort})" for v in vars_)
+    target = f"(forall ((x {sort}) (y {sort})) (= (op x y) {target_expr}))"
+    return f"""\
+(set-logic {logic})
+(declare-fun op ({sort} {sort}) {sort})
+(assert (forall ({bindings}) {formula}))
+(assert (not {target}))
 (check-sat)
 """
 
@@ -189,6 +214,9 @@ seen_eq    = set()
 seen_proj  = set()
 seen_bvxor = set()
 seen_bvnor = set()
+seen_nia      = set()
+seen_nra      = set()
+seen_constant = set()
 
 for row in tqdm(rows):
     name = row['filename']
@@ -207,15 +235,30 @@ for row in tqdm(rows):
     # 3. eq/ — assert no duplicates
     write_no_dup(f"tmp/eq/{name}.smt2", make_eq(pos, neg), seen_eq)
 
-    # 4. proj/ — deduplicate
+    # 4. verification/proj/ — deduplicate
     for formula, tag in [(pos, "pos"), (neg, "neg")]:
         for proj in [1, 2]:
-            write_unique(f"tmp/proj/{name}_{tag}_proj{proj}.smt2", make_proj(formula, proj), seen_proj)
+            write_unique(f"tmp/verification/proj/{name}_{tag}_proj{proj}.smt2", make_proj(formula, proj), seen_proj)
 
-    # 5. bvxor/ and bvnor/ — deduplicate
+    # 5. verification/constant/ — deduplicate
+    for formula, tag in [(pos, "pos"), (neg, "neg")]:
+        write_unique(f"tmp/verification/constant/{name}_{tag}.smt2", make_constant(formula), seen_constant)
+
+    # 6. verification/nia/ and verification/nra/ — deduplicate
+    arith_targets = [
+        ("(- x y)",       "sub_xy"),
+        ("(- y x)",       "sub_yx"),
+        ("(- (+ x y))",   "neg_sum"),
+    ]
+    for formula, tag in [(pos, "pos"), (neg, "neg")]:
+        for target_expr, suffix in arith_targets:
+            write_unique(f"tmp/verification/nia/{name}_{tag}_{suffix}.smt2", make_arith_check(formula, target_expr, "Int"),  seen_nia)
+            write_unique(f"tmp/verification/nra/{name}_{tag}_{suffix}.smt2", make_arith_check(formula, target_expr, "Real"), seen_nra)
+
+    # 6. verification/bvxor/ and verification/bvnor/ — deduplicate
     for formula, tag in [(pos, "pos"), (neg, "neg")]:
         for bw in range(1, 11):
-            write_unique(f"tmp/bvxor/{name}_{tag}_{bw}.smt2", make_bvop_check(formula, bw, "bvxor"), seen_bvxor)
-            write_unique(f"tmp/bvnor/{name}_{tag}_{bw}.smt2", make_bvop_check(formula, bw, "bvnor"), seen_bvnor)
+            write_unique(f"tmp/verification/bvxor/{name}_{tag}_{bw}.smt2", make_bvop_check(formula, bw, "bvxor"), seen_bvxor)
+            write_unique(f"tmp/verification/bvnor/{name}_{tag}_{bw}.smt2", make_bvop_check(formula, bw, "bvnor"), seen_bvnor)
 
 print(f"Done. Processed {len(rows)} benchmarks.")
