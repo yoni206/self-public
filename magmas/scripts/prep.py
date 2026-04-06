@@ -47,7 +47,13 @@ def extract_formula(assert_line, strip_not=False):
 
 rows = []
 
-for filepath in sorted(glob.glob("benchmarks/**/*.smt2", recursive=True)):
+if len(sys.argv) < 3:
+    print(f"Usage: {sys.argv[0]} <input_dir> <output.csv>")
+    sys.exit(1)
+
+input_dir = sys.argv[1]
+
+for filepath in sorted(glob.glob(os.path.join(input_dir, "**/*.smt2"), recursive=True)):
     with open(filepath) as f:
         assert_lines = [l.strip() for l in f if l.strip().startswith('(assert')]
 
@@ -60,11 +66,7 @@ for filepath in sorted(glob.glob("benchmarks/**/*.smt2", recursive=True)):
     negative = extract_formula(assert_lines[1], strip_not=True)
     rows.append((basename, positive, negative))
 
-if len(sys.argv) < 2:
-    print(f"Usage: {sys.argv[0]} <output.csv>")
-    sys.exit(1)
-
-out = sys.argv[1]
+out = sys.argv[2]
 os.makedirs(os.path.dirname(out) or ".", exist_ok=True)
 with open(out, 'w', newline='') as f:
     writer = csv.writer(f)
